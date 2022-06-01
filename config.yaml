@@ -1,4 +1,4 @@
-baseurl: https://jonascz.pw/
+baseurl: http://jonascz.pw/
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
