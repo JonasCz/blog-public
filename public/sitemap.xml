@@ -2,10 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jonascz.pw/categories/</loc>
+    <loc>http://jonascz.pw/categories/apps-software/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
   </url><url>
-    <loc>https://jonascz.pw/</loc>
+    <loc>http://jonascz.pw/post/tech/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
   </url><url>
-    <loc>https://jonascz.pw/tags/</loc>
+    <loc>http://jonascz.pw/categories/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
+  </url><url>
+    <loc>http://jonascz.pw/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
+  </url><url>
+    <loc>http://jonascz.pw/post/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
+  </url><url>
+    <loc>http://jonascz.pw/post/tech/setting-up-strava-heatmap-in-osmand/</loc>
+    <lastmod>2019-11-28T12:59:10+01:00</lastmod>
+  </url><url>
+    <loc>http://jonascz.pw/tags/</loc>
   </url>
 </urlset>

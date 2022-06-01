@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>JonasCz</title>
-        <link>http://jonascz.pw/</link>
-        <description>Recent content on JonasCz</description>
+        <title>Posts on JonasCz</title>
+        <link>http://jonascz.pw/post/</link>
+        <description>Recent content in Posts on JonasCz</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 29 May 2022 12:59:10 +0100</lastBuildDate><atom:link href="http://jonascz.pw/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 29 May 2022 12:59:10 +0100</lastBuildDate><atom:link href="http://jonascz.pw/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay</title>
         <link>http://jonascz.pw/post/tech/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</link>
         <pubDate>Sun, 29 May 2022 12:59:10 +0100</pubDate>
