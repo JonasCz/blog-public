@@ -3,6 +3,8 @@ title: "Setting up Strava Heatmap in OsmAnd"
 date: 2019-11-28T12:59:10+01:00
 draft: false
 image: screenshot.png
+categories:
+- Apps & software
 ---
 
 

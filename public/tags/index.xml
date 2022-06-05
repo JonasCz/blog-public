@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Tags on Example Site</title>
+        <title>Tags on Jonas Czech</title>
         <link>https://example.com/tags/</link>
-        <description>Recent content in Tags on Example Site</description>
+        <description>Recent content in Tags on Jonas Czech</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+        <language>en-us</language>
+        <lastBuildDate>Sun, 29 May 2022 12:59:10 +0100</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>OsmAnd</title>
+        <link>https://example.com/tags/osmand/</link>
+        <pubDate>Sun, 29 May 2022 12:59:10 +0100</pubDate>
+        
+        <guid>https://example.com/tags/osmand/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>

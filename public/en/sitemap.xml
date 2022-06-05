@@ -44,13 +44,14 @@
                 href="https://example.com/"
                 />
   </url><url>
+    <loc>https://example.com/tags/osmand/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
+  </url><url>
     <loc>https://example.com/post/</loc>
     <lastmod>2022-05-29T12:59:10+01:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/setting-up-strava-heatmap-in-osmand/</loc>
-    <lastmod>2019-11-28T12:59:10+01:00</lastmod>
-  </url><url>
     <loc>https://example.com/tags/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -66,5 +67,8 @@
                 hreflang="en"
                 href="https://example.com/tags/"
                 />
+  </url><url>
+    <loc>https://example.com/p/setting-up-strava-heatmap-in-osmand/</loc>
+    <lastmod>2019-11-28T12:59:10+01:00</lastmod>
   </url>
 </urlset>

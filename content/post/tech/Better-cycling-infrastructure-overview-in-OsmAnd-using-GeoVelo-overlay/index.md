@@ -5,12 +5,8 @@ draft: false
 image: screenshot.jpg
 categories:
 - Apps & software
-menu: 
-    main:
-        name: title (optional)
-        weight: -90
-        params:
-            icon: home
+tags:
+- OsmAnd
 ---
 I’ve recently come across GeoVelo, which offers a map which clearly shows cycling infrastructure even when zoomed out to a country-level overview, which is a great way to have an overview for trip planning, which is’t possible with the offline OsmAnd maps, since cycleways are only shown when zoomed in far enough in OsmAnd. Even with a custom rendering.xml it’s still not possible to get an overview of cycle infrastructure on a country or region level, due to the way the cycleway information is baked into the offline map files. (Side note: GeoVelo also offers their own app - no offline functionality however)
 

@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>https://example.com/en/sitemap.xml</loc>
-    
-      <lastmod>2022-05-29T12:59:10+01:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://example.com/zh-cn/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://example.com/ar/sitemap.xml</loc>
-    
-  </sitemap>
-  
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://example.com/categories/apps-software/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
+  </url><url>
+    <loc>https://example.com/p/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
+  </url><url>
+    <loc>https://example.com/categories/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
+  </url><url>
+    <loc>https://example.com/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
+  </url><url>
+    <loc>https://example.com/tags/osmand/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
+  </url><url>
+    <loc>https://example.com/post/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
+  </url><url>
+    <loc>https://example.com/tags/</loc>
+    <lastmod>2022-05-29T12:59:10+01:00</lastmod>
+  </url><url>
+    <loc>https://example.com/p/setting-up-strava-heatmap-in-osmand/</loc>
+    <lastmod>2019-11-28T12:59:10+01:00</lastmod>
+  </url>
+</urlset>
