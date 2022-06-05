@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Categories on JonasCz</title>
-        <link>http://jonascz.pw/categories/</link>
-        <description>Recent content in Categories on JonasCz</description>
+        <title>Categories on Example Site</title>
+        <link>https://example.com/categories/</link>
+        <description>Recent content in Categories on Example Site</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 29 May 2022 12:59:10 +0100</lastBuildDate><atom:link href="http://jonascz.pw/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 29 May 2022 12:59:10 +0100</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Apps &amp; software</title>
-        <link>http://jonascz.pw/categories/apps-software/</link>
+        <link>https://example.com/categories/apps-software/</link>
         <pubDate>Sun, 29 May 2022 12:59:10 +0100</pubDate>
         
-        <guid>http://jonascz.pw/categories/apps-software/</guid>
+        <guid>https://example.com/categories/apps-software/</guid>
         <description></description>
         </item>
         

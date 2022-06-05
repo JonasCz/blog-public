@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Apps &amp; software on JonasCz</title>
-        <link>http://jonascz.pw/categories/apps-software/</link>
-        <description>Recent content in Apps &amp; software on JonasCz</description>
+        <title>Apps &amp; software on Example Site</title>
+        <link>https://example.com/categories/apps-software/</link>
+        <description>Recent content in Apps &amp; software on Example Site</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 29 May 2022 12:59:10 +0100</lastBuildDate><atom:link href="http://jonascz.pw/categories/apps-software/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 29 May 2022 12:59:10 +0100</lastBuildDate><atom:link href="https://example.com/categories/apps-software/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay</title>
-        <link>http://jonascz.pw/post/tech/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</link>
+        <link>https://example.com/p/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</link>
         <pubDate>Sun, 29 May 2022 12:59:10 +0100</pubDate>
         
-        <guid>http://jonascz.pw/post/tech/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</guid>
-        <description>&lt;img src="http://jonascz.pw/post/tech/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot.jpg" alt="Featured image of post Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay" /&gt;&lt;p&gt;I’ve recently come across GeoVelo, which offers a map which clearly shows cycling infrastructure even when zoomed out to a country-level overview, which is a great way to have an overview for trip planning, which is’t possible with the offline OsmAnd maps, since cycleways are only shown when zoomed in far enough in OsmAnd. Even with a custom rendering.xml it’s still not possible to get an overview of cycle infrastructure on a country or region level, due to the way the cycleway information is baked into the offline map files. (Side note: GeoVelo also offers their own app - no offline functionality however)&lt;/p&gt;
+        <guid>https://example.com/p/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</guid>
+        <description>&lt;img src="https://example.com/p/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot.jpg" alt="Featured image of post Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay" /&gt;&lt;p&gt;I’ve recently come across GeoVelo, which offers a map which clearly shows cycling infrastructure even when zoomed out to a country-level overview, which is a great way to have an overview for trip planning, which is’t possible with the offline OsmAnd maps, since cycleways are only shown when zoomed in far enough in OsmAnd. Even with a custom rendering.xml it’s still not possible to get an overview of cycle infrastructure on a country or region level, due to the way the cycleway information is baked into the offline map files. (Side note: GeoVelo also offers their own app - no offline functionality however)&lt;/p&gt;
 &lt;p&gt;But - the GeoVelo tiles can be used as an overlay in OsmAnd, to offer an overview, even when zoomed out - it can even be combined with the above mentioned customized rendering.xml for close zoom levels, and the online GeoVelo maps when zoomed out (OsmAnd will cache the tiles for offline use).&lt;/p&gt;
 &lt;p&gt;Anyway, here’s what it looks like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://jonascz.pw/post/tech/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot.jpg&#34;
 	width=&#34;2160&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://jonascz.pw/post/tech/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot_hud8316c9fa22a5e46cca965adde5e7cd6_1285269_480x0_resize_q75_box.jpg 480w, http://jonascz.pw/post/tech/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot_hud8316c9fa22a5e46cca965adde5e7cd6_1285269_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://example.com/p/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot_hud8316c9fa22a5e46cca965adde5e7cd6_1285269_480x0_resize_q75_box.jpg 480w, https://example.com/p/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot_hud8316c9fa22a5e46cca965adde5e7cd6_1285269_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;GeoVelo overly add dialog&#34;
@@ -38,10 +38,10 @@
 &lt;li&gt;Maximum zoom: 16&lt;/li&gt;
 &lt;li&gt;Minimum zoom: 2&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://jonascz.pw/post/tech/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;1356&#34;
-	srcset=&#34;http://jonascz.pw/post/tech/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add_hu3b622d932adc2dfc859c155eaf1b09fa_178142_480x0_resize_q75_box.jpg 480w, http://jonascz.pw/post/tech/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add_hu3b622d932adc2dfc859c155eaf1b09fa_178142_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://example.com/p/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add_hu3b622d932adc2dfc859c155eaf1b09fa_178142_480x0_resize_q75_box.jpg 480w, https://example.com/p/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add_hu3b622d932adc2dfc859c155eaf1b09fa_178142_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;GeoVelo overly add dialog&#34;
