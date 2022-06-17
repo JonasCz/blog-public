@@ -7,7 +7,7 @@ title: Jonas's blog
 languages:
     en:
         languageName: English
-        title: Jonas Czech
+        title: Jonas's blog
         weight: 1
 
 # Change it to your Disqus shortname before using
@@ -25,7 +25,7 @@ DefaultContentLanguage: en
 hasCJKLanguage: false
 
 permalinks:
-    post: /p/:slug/
+    post: /:slug/
     page: /:slug/
 
 params:
