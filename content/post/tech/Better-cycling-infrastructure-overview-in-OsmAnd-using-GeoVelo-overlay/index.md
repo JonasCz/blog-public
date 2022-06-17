@@ -1,6 +1,6 @@
 ---
 title: "Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay"
-date: 2022-05-29T12:59:10+01:00
+date: 2019-11-28T12:59:10+01:00
 draft: false
 image: screenshot.jpg
 categories:

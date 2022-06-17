@@ -2,7 +2,7 @@ baseurl: https://example.com
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
-title: Jonas Czech
+title: Jonas's blog
 
 languages:
     en:
@@ -36,7 +36,7 @@ params:
     favicon:
 
     footer:
-        since: 2020
+        since: 2019
         customText:
 
     dateFormat:
@@ -44,8 +44,8 @@ params:
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        emoji: 🚴
+        subtitle: Documenting my adventures and other things. Want to contact me? Send an email to contact@jonas.bike - i'll look at messages occasionally :-)
         avatar:
             enabled: true
             local: true
@@ -56,7 +56,7 @@ params:
         toc: true
         readingTime: true
         license:
-            enabled: true
+            enabled: false
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
@@ -188,15 +188,15 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/CaiJimmy/hugo-theme-stack
+          url: https://github.com/JonasCz
           params:
               icon: brand-github
 
-        - identifier: twitter
-          name: Twitter
+        - identifier: stackoverflow
+          name: Stack Overflow
           url: https://twitter.com
           params:
-              icon: brand-twitter
+              icon: brand-stackoverflow
 
 related:
     includeNewer: true
