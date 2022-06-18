@@ -194,7 +194,7 @@ menu:
 
         - identifier: stackoverflow
           name: Stack Overflow
-          url: https://twitter.com
+          url: https://stackoverflow.com/users/4428462/jonascz
           params:
               icon: brand-stackoverflow
 
