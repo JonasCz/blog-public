@@ -28,7 +28,7 @@
 		data-flex-basis=&#34;348px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;Unfortunateley I don&amp;rsquo;t have photos of everything, nor the buld process :-(&lt;/p&gt;
+&lt;p&gt;Unfortunateley I don&amp;rsquo;t have photos of everything, nor the build process :-(&lt;/p&gt;
 &lt;h2 id=&#34;build&#34;&gt;Build&lt;/h2&gt;
 &lt;p&gt;Components for the solar trailer:&lt;/p&gt;
 &lt;ul&gt;
@@ -39,7 +39,7 @@
 &lt;p&gt;4 100w flexible solar panels; two exposed while riding, with two more tucked underneath and deployable when stopped. 1.2kg each according to the manufacturer.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;1 solar charge controller, from China, which can be found by searching for &lt;em&gt;CTK-EV300&lt;/em&gt; This is a &amp;ldquo;boosting&amp;rdquo; model, meaining it takes the lower voltage produced by the solar panels (~30v), and &amp;ldquo;boosts&amp;rdquo; it up to the ~50v required for charging the battery pack. It works quite well, although not optimal for rapidly passing / varying shade.&lt;/p&gt;
+&lt;p&gt;1 solar charge controller, from China, which can be found by searching for &lt;em&gt;CTK-EV300&lt;/em&gt;. This is a &amp;ldquo;boosting&amp;rdquo; model, meaining it takes the lower voltage produced by the solar panels (~30v), and &amp;ldquo;boosts&amp;rdquo; it up to the ~50v required for charging the battery pack. It works quite well, although not optimal for rapidly passing / varying shade.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;And the bike I already had was a self-built eBike conversion with:&lt;/p&gt;
@@ -109,7 +109,7 @@
 &lt;p&gt;A second battery to bring the total capacity up to 2000wh would add more flexibility, and also allow to benefit more from overnight mains charging at campsites or similar.&lt;/p&gt;
 &lt;p&gt;Also required is looking at the weather forecast, in particular the daily sunshine hours and times, and planning during the days before.&lt;/p&gt;
 &lt;p&gt;I think 400w of solar and 1000wh battery is about the minimum for a solar set-up. For a very approximate idea of how far you can go with your set-up, &lt;a class=&#34;link&#34; href=&#34;https://endless-sphere.com/forums/viewtopic.php?f=6&amp;amp;t=94721&amp;amp;p=1406135#p1408723&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;there&amp;rsquo;s a helpful calculator spreadsheet here&lt;/a&gt;&lt;/p&gt;
+    &gt;there&amp;rsquo;s a helpful calculator spreadsheet here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;day-to-day-limitations&#34;&gt;Day to day limitations&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
