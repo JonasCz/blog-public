@@ -24,7 +24,7 @@ Components for the solar trailer:
 
 * 4 100w flexible solar panels; two exposed while riding, with two more tucked underneath and deployable when stopped. 1.2kg each according to the manufacturer.
 
-* 1 solar charge controller, from China, which can be found by searching for _CTK-EV300_ This is a "boosting" model, meaining it takes the lower voltage produced by the solar panels (~30v), and "boosts" it up to the ~50v required for charging the battery pack. It works quite well, although not optimal for rapidly passing / varying shade.
+* 1 solar charge controller, from China, which can be found by searching for _CTK-EV300_. This is a "boosting" model, meaining it takes the lower voltage produced by the solar panels (~30v), and "boosts" it up to the ~50v required for charging the battery pack. It works quite well, although not optimal for rapidly passing / varying shade.
 
 And the bike I already had was a self-built eBike conversion with:
 
@@ -79,7 +79,7 @@ A second battery to bring the total capacity up to 2000wh would add more flexibi
 
 Also required is looking at the weather forecast, in particular the daily sunshine hours and times, and planning during the days before. 
 
-I think 400w of solar and 1000wh battery is about the minimum for a solar set-up. For a very approximate idea of how far you can go with your set-up, [there's a helpful calculator spreadsheet here](https://endless-sphere.com/forums/viewtopic.php?f=6&t=94721&p=1406135#p1408723)
+I think 400w of solar and 1000wh battery is about the minimum for a solar set-up. For a very approximate idea of how far you can go with your set-up, [there's a helpful calculator spreadsheet here](https://endless-sphere.com/forums/viewtopic.php?f=6&t=94721&p=1406135#p1408723).
 
 ### Day to day limitations
 
