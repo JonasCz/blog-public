@@ -14,7 +14,7 @@ I've built a solar charged ebike rig, with the aim of being able to go further, 
 
 ![Trailer with soler panels in the riding configuration. And me, happy that I made it to the beach!](MVIMG_20210625_214454.jpg)
 
-Unfortunateley I don't have photos of everything, nor the buld process :-(
+Unfortunateley I don't have photos of everything, nor the build process :-(
 
 ## Build
 
