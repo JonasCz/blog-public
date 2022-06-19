@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Bike trips on Jonas&#39;s blog</title>
-        <link>https://example.com/categories/bike-trips/</link>
+        <link>https://jonas.bike/categories/bike-trips/</link>
         <description>Recent content in Bike trips on Jonas&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 19 Aug 2021 11:52:10 +0100</lastBuildDate><atom:link href="https://example.com/categories/bike-trips/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 19 Aug 2021 11:52:10 +0100</lastBuildDate><atom:link href="https://jonas.bike/categories/bike-trips/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Testing solar ebike charging on the road (how many more KMs can I get?)</title>
-        <link>https://example.com/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/</link>
+        <link>https://jonas.bike/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/</link>
         <pubDate>Thu, 19 Aug 2021 11:52:10 +0100</pubDate>
         
-        <guid>https://example.com/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/</guid>
-        <description>&lt;img src="https://example.com/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_154038.jpg" alt="Featured image of post Testing solar ebike charging on the road (how many more KMs can I get?)" /&gt;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+        <guid>https://jonas.bike/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/</guid>
+        <description>&lt;img src="https://jonas.bike/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_154038.jpg" alt="Featured image of post Testing solar ebike charging on the road (how many more KMs can I get?)" /&gt;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;I&amp;rsquo;ve built a solar charged ebike rig, with the aim of being able to go further, faster, and with less effort. This is a short write-up of what went into it. Questions? Send an email to the adress listed at left or in the menu.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_214454.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://jonas.bike/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_214454.jpg&#34;
 	width=&#34;3972&#34;
 	height=&#34;2736&#34;
-	srcset=&#34;https://example.com/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_214454_hucaf183842553bb7c6a1a194af407bbe3_2485585_480x0_resize_q75_box.jpg 480w, https://example.com/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_214454_hucaf183842553bb7c6a1a194af407bbe3_2485585_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://jonas.bike/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_214454_hucaf183842553bb7c6a1a194af407bbe3_2485585_480x0_resize_q75_box.jpg 480w, https://jonas.bike/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_214454_hucaf183842553bb7c6a1a194af407bbe3_2485585_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Trailer with soler panels in the riding configuration. And me, happy that I made it to the beach!&#34;
@@ -52,10 +52,10 @@
 &lt;p&gt;I also designed a custom connector for the trailer to attach to the bike, since I didn&amp;rsquo;t quite trust the fragile looking extended quick-release skewer the trailer came with. The custom connector design was a pair of &amp;ldquo;split&amp;rdquo; 3D printed blocks with space inside, modelled to fit precisely around the seatstays of the bike, those blocks then being clamped in place from either side with steel plates, and then the trailer hooking onto the steel plates (sorry, no photos for now..). So far no issues with this.&lt;/p&gt;
 &lt;h2 id=&#34;test-trip&#34;&gt;Test trip&lt;/h2&gt;
 &lt;p&gt;I did a 5 day trip to test this setup, in south-west france. Two days out, one rest day (aka lie-on-the-beach-and-do-nothing day), then two days back on the same route. I deliberately picked a week with near uninterrupted sunshine (this is important!), and a route that is nearly completely flat. The approximate route, resulting in aprroximately 160km per day:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/screenshot.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://jonas.bike/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/screenshot.jpg&#34;
 	width=&#34;2714&#34;
 	height=&#34;1474&#34;
-	srcset=&#34;https://example.com/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/screenshot_hue4bf7c4ea1b7169024982850562bde23_1158021_480x0_resize_q75_box.jpg 480w, https://example.com/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/screenshot_hue4bf7c4ea1b7169024982850562bde23_1158021_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://jonas.bike/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/screenshot_hue4bf7c4ea1b7169024982850562bde23_1158021_480x0_resize_q75_box.jpg 480w, https://jonas.bike/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/screenshot_hue4bf7c4ea1b7169024982850562bde23_1158021_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Route plan&#34;
@@ -74,10 +74,10 @@
 &lt;p&gt;You think you&amp;rsquo;re dependent on the weather with a &amp;ldquo;normal&amp;rdquo; bike touring set up? Well, you&amp;rsquo;re even more dependent on the weather with this. For me it resulted in constantly looking at the weather forecast and the battery remaining percentage.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;First&lt;/strong&gt;, even on perfect weather days, I needed to plan my riding around the sunshine hours, since the solar energy collected during riding is very low. This is due to the fact that even partial shade (from myself, surrounding trees, imperfect panel angle&amp;hellip;) reduces the output of the panels significantly, and in addition, after brief partial shading of the panel, the charge controller takes a while to &amp;ldquo;recover&amp;rdquo; before it produces full charging power again. A more expensive controller (such as Genasun) may be better in this regard, but the limitation of shading is still there.&lt;/p&gt;
 &lt;p&gt;Additionally, while riding I only have 200w of solar panels exposed, whereas when stopped, I can unfold 200w more, thus having an even stronger incentive to stop and charge:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_154038.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://jonas.bike/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_154038.jpg&#34;
 	width=&#34;4000&#34;
 	height=&#34;3000&#34;
-	srcset=&#34;https://example.com/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_154038_hu850231dcb3acf2e7f116a06368871962_5943220_480x0_resize_q75_box.jpg 480w, https://example.com/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_154038_hu850231dcb3acf2e7f116a06368871962_5943220_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://jonas.bike/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_154038_hu850231dcb3acf2e7f116a06368871962_5943220_480x0_resize_q75_box.jpg 480w, https://jonas.bike/testing-solar-ebike-charging-on-the-road-how-many-more-kms-can-i-get/MVIMG_20210625_154038_hu850231dcb3acf2e7f116a06368871962_5943220_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;400w of solar charging when stopped&#34;
