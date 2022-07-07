@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apps &amp; software on Jonas's blog</title><link>https://jonas.bike/categories/apps-software/</link><description>Recent content in Apps &amp; software on Jonas's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 28 Nov 2019 12:59:10 +0100</lastBuildDate><atom:link href="https://jonas.bike/categories/apps-software/index.xml" rel="self" type="application/rss+xml"/><item><title>Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay</title><link>https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</link><pubDate>Thu, 28 Nov 2019 12:59:10 +0100</pubDate><guid>https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</guid><description>&lt;img src="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot.jpg" alt="Featured image of post Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay" />&lt;p>I’ve recently come across GeoVelo, which offers a map which clearly shows cycling infrastructure even when zoomed out to a country-level overview, which is a great way to have an overview for trip planning, which is’t possible with the offline OsmAnd maps, since cycleways are only shown when zoomed in far enough in OsmAnd. Even with a custom rendering.xml it’s still not possible to get an overview of cycle infrastructure on a country or region level, due to the way the cycleway information is baked into the offline map files. (Side note: GeoVelo also offers their own app - no offline functionality however)&lt;/p>
+&lt;p>But - the GeoVelo tiles can be used as an overlay in OsmAnd, to offer an overview, even when zoomed out - it can even be combined with the above mentioned customized rendering.xml for close zoom levels, and the online GeoVelo maps when zoomed out (OsmAnd will cache the tiles for offline use).&lt;/p>
+&lt;p>Anyway, here’s what it looks like:&lt;/p>
+&lt;p>&lt;img src="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot.jpg"
+width="2160"
+height="1080"
+srcset="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot_hud8316c9fa22a5e46cca965adde5e7cd6_1285269_480x0_resize_q75_box.jpg 480w, https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot_hud8316c9fa22a5e46cca965adde5e7cd6_1285269_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="GeoVelo overly add dialog"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="480px"
+>&lt;/p>
+&lt;p>And, how to set it up:&lt;/p>
+&lt;p>In OsmAnd, go to “Configure map”, then “Map source…”, “Define/Edit…”, and enter the following details:&lt;/p>
+&lt;ul>
+&lt;li>Name: GeoVelo (or anything you want)&lt;/li>
+&lt;li>URL: &lt;a class="link" href="https://tiles4.geovelo.fr/raster/facilities/%7b0%7d/%7b1%7d/%7b2%7d.png" target="_blank" rel="noopener"
+>https://tiles4.geovelo.fr/raster/facilities/{0}/{1}/{2}.png&lt;/a>&lt;/li>
+&lt;li>Maximum zoom: 16&lt;/li>
+&lt;li>Minimum zoom: 2&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add.jpg"
+width="1080"
+height="1356"
+srcset="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add_hu3b622d932adc2dfc859c155eaf1b09fa_178142_480x0_resize_q75_box.jpg 480w, https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add_hu3b622d932adc2dfc859c155eaf1b09fa_178142_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="GeoVelo overly add dialog"
+class="gallery-image"
+data-flex-grow="79"
+data-flex-basis="191px"
+>&lt;/p>
+&lt;p>After that, just enable “Overlay map”, and set it to “GeoVelo”. You might also need to set “map source” back to “Offline vector maps” if OsmAnd changes to only the GeoVelo overlay.&lt;/p>
+&lt;p>The map legend is available at GeoVelo, but, tl;dr: the dark green lines are dedicated cycleways, light green ones are shared, road cycle lanes.&lt;/p>
+&lt;p>Have fun!&lt;/p></description></item><item><title>Setting up Strava Heatmap in OsmAnd</title><link>https://jonas.bike/setting-up-strava-heatmap-in-osmand/</link><pubDate>Thu, 28 Nov 2019 12:59:10 +0100</pubDate><guid>https://jonas.bike/setting-up-strava-heatmap-in-osmand/</guid><description>&lt;img src="https://jonas.bike/setting-up-strava-heatmap-in-osmand/screenshot.png" alt="Featured image of post Setting up Strava Heatmap in OsmAnd" />&lt;p>OsmAnd is a great app for hiking, mountain biking, or other outdoorsy things, however, one can make it even better by underlaying (or overlaying) data from Strava’s heatmap in addition to the offline Openstreetmap data. This is quite useful for spotting potential trails or routes that are not in Openstreetmap yet, or for identifying how “good” (poular…) a trail might be, based on how many Strava users take it. Here’s what it looks like:&lt;/p>
+&lt;p>Strava heatmap as an underaly in Osmand&lt;/p>
+&lt;p>How to set it up; the easy way:&lt;/p>
+&lt;p>(This uses an online proxy to retrive the map tiles from Strava, so you don’t have to login, fiddle around with session tokens in the URL, etc. yourself) You can find more details about it here, including other maps available.&lt;/p>
+&lt;p>In OsmAnd, go to “Configure map”, then “Map source…”, “Define/Edit…”, and enter the following details:&lt;/p>
+&lt;pre>&lt;code>Name: Strava heatmap (or anything you want)
+URL: https://anygis.ru/api/v1/Tracks_Strava_All_HD/{1}/{2}/{0}
+Maximum zoom: 15
+Minimum zoom: 0
+&lt;/code>&lt;/pre>
+&lt;p>That’s it. Just enable “underlay map”, and set it to “Strava heatmap”. If it doesn’t work for you, read on:&lt;/p>
+&lt;p>And in case the easy way doesn’t work (you’ll need a Strava account and a desktop computer):&lt;/p>
+&lt;p>Go to &lt;a class="link" href="https://www.strava.com/heatmap" target="_blank" rel="noopener"
+>https://www.strava.com/heatmap&lt;/a>, login, and then open your browser’s developer tools (hit F12). You’ll need to go to the storage tab (in chrome, that’s under “Application” -&amp;gt; “Cookies”), and copy the values of CloudFront-Signature, CloudFront-Key-Pair-Id and CloudFront-Policy, to make up the following URL: (replace the dots with the values of those cookies…)&lt;/p>
+&lt;p>&lt;a class="link" href="https://heatmap-external-a.strava.com/tiles-auth/all/gray/%7b0%7d/%7b1%7d/%7b2%7d.png?px=256&amp;amp;Signature=.......&amp;amp;Key-Pair-Id=.......&amp;amp;Policy=" target="_blank" rel="noopener"
+>https://heatmap-external-a.strava.com/tiles-auth/all/gray/{0}/{1}/{2}.png?px=256&amp;Signature=.......&amp;Key-Pair-Id=.......&amp;Policy=&lt;/a>&amp;hellip;&amp;hellip;.&lt;/p>
+&lt;p>Send this to your phone somehow once you’ve got it all.&lt;/p>
+&lt;p>In OsmAnd, go to “Configure map”, then “Map source…”, “Define/Edit…”, and enter the following details:&lt;/p>
+&lt;pre>&lt;code>Name: Strava heatmap (or anything you want)
+URL: the url you got earlier.
+Maximum zoom: 16
+&lt;/code>&lt;/pre>
+&lt;p>It should look something like this:&lt;/p>
+&lt;p>Strava heatmap as an underaly in Osmand&lt;/p>
+&lt;p>After that, just enable “underlay map”, and set it to “Strava heatmap”. You might also need to set “map source” back to “Offline vector maps” if OsmAnd changes to only the heatmap.&lt;/p>
+&lt;p>If it stops working; Strava probably logged you out, you’ll need to do the whole URL assembly-copy-paste thing again - but you can do “select existing” in the OsmAnd “Define/edit” dialog to just update the URL.&lt;/p>
+&lt;p>Have fun!&lt;/p></description></item></channel></rss>
