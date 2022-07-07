@@ -8,6 +8,8 @@ categories:
 tags:
 - OsmAnd
 ---
+**Update 2022:** while this still works, the OsmAnd interface looks a bit different now, and the "easy" way does not currently work. However, there is now a [browser extension](https://github.com/zekefarwell/josm-strava-heatmap) that makes it easy to get the URL just by visiting the Strava heatmap desktop page.
+
 OsmAnd is a great app for hiking, mountain biking, or other outdoorsy things, however, one can make it even better by underlaying (or overlaying) data from Strava’s heatmap in addition to the offline Openstreetmap data. This is quite useful for spotting potential trails or routes that are not in Openstreetmap yet, or for identifying how “good” (poular…) a trail might be, based on how many Strava users take it. Here’s what it looks like:
 
 Strava heatmap as an underaly in Osmand
