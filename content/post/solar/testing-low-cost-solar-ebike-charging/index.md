@@ -18,7 +18,7 @@ Unfortunateley I don't have photos of everything, nor the build process :-(
 
 ## Build
 
-Components for the solar trailer:
+Components for the solar trailer: 
 
 * A heavy steel-framed, single wheel bike trailer (8.5kg for just the unmodified trailer), with a DIY frame to hold up the solar panels, made of aluminum square tubes, held together by 3D-printed spacer blocks, then a bolt (with a big washer) through the spacer block and the square tube(s) to clamp it together.
 
