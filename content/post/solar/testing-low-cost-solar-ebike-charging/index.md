@@ -10,7 +10,7 @@ tags:
 ---
 ## Overview
 
-I've built a solar charged ebike rig, with the aim of being able to go further, faster, and with less effort. This is a short write-up of what went into it. Questions? Send an email to the adress listed at left or in the menu.
+I've built a solar charged ebike setup, with the aim of being able to go further, faster, and with less effort. This is a short write-up of what went into it. Questions? Send an email to the adress listed at left or in the menu.
 
 ![Trailer with soler panels in the riding configuration. And me, happy that I made it to the beach!](MVIMG_20210625_214454.jpg)
 
