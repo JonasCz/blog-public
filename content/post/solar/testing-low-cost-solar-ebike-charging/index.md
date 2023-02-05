@@ -6,7 +6,7 @@ image: MVIMG_20210625_154038.jpg
 categories:
 - Bike trips
 tags:
-- Solar
+- Solar power
 ---
 ## Overview
 
