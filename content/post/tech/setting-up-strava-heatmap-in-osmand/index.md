@@ -48,7 +48,7 @@ In OsmAnd, go to “Configure map”, then “Map source…”, “Define/Edit�
 
 It should look something like this:
 
-Strava heatmap as an underaly in Osmand
+![Strava heatmap as an underaly in Osmand](screenshot.png)
 
 After that, just enable “underlay map”, and set it to “Strava heatmap”. You might also need to set “map source” back to “Offline vector maps” if OsmAnd changes to only the heatmap.
 
