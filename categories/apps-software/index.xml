@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apps &amp; software on Jonas's blog</title><link>https://jonas.bike/categories/apps-software/</link><description>Recent content in Apps &amp; software on Jonas's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 28 Nov 2019 12:59:10 +0100</lastBuildDate><atom:link href="https://jonas.bike/categories/apps-software/index.xml" rel="self" type="application/rss+xml"/><item><title>Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay</title><link>https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</link><pubDate>Thu, 28 Nov 2019 12:59:10 +0100</pubDate><guid>https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</guid><description>&lt;img src="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot.jpg" alt="Featured image of post Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay" />&lt;p>&lt;strong>2022 update:&lt;/strong> this still works; however the OsmAnd interface looks slightly different now.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apps &amp; software on Jonas's blog</title><link>https://jonas.bike/categories/apps-software/</link><description>Recent content in Apps &amp; software on Jonas's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 28 Nov 2019 12:59:10 +0100</lastBuildDate><atom:link href="https://jonas.bike/categories/apps-software/index.xml" rel="self" type="application/rss+xml"/><item><title>Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay</title><link>https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</link><pubDate>Thu, 28 Nov 2019 12:59:10 +0100</pubDate><guid>https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</guid><description>&lt;img src="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot.jpg" alt="Featured image of post Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay" />&lt;p>&lt;strong>2022 update:&lt;/strong> this still works; however the OsmAnd interface looks slightly different now.&lt;/p>
 &lt;p>I’ve recently come across GeoVelo, which offers a map which clearly shows cycling infrastructure even when zoomed out to a country-level overview, which is a great way to have an overview for trip planning, which is’t possible with the offline OsmAnd maps, since cycleways are only shown when zoomed in far enough in OsmAnd. Even with a custom rendering.xml it’s still not possible to get an overview of cycle infrastructure on a country or region level, due to the way the cycleway information is baked into the offline map files. (Side note: GeoVelo also offers their own app - no offline functionality however)&lt;/p>
 &lt;p>But - the GeoVelo tiles can be used as an overlay in OsmAnd, to offer an overview, even when zoomed out - it can even be combined with the above mentioned customized rendering.xml for close zoom levels, and the online GeoVelo maps when zoomed out (OsmAnd will cache the tiles for offline use).&lt;/p>
 &lt;p>Anyway, here’s what it looks like:&lt;/p>
@@ -58,7 +58,16 @@ URL: the url you got earlier.
 Maximum zoom: 16
 &lt;/code>&lt;/pre>
 &lt;p>It should look something like this:&lt;/p>
-&lt;p>Strava heatmap as an underaly in Osmand&lt;/p>
+&lt;p>&lt;img src="https://jonas.bike/setting-up-strava-heatmap-in-osmand/screenshot.png"
+width="2160"
+height="1080"
+srcset="https://jonas.bike/setting-up-strava-heatmap-in-osmand/screenshot_huf8436b8296e46f8322fc7abec2a9ab6f_702766_480x0_resize_box_3.png 480w, https://jonas.bike/setting-up-strava-heatmap-in-osmand/screenshot_huf8436b8296e46f8322fc7abec2a9ab6f_702766_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Strava heatmap as an underaly in Osmand"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="480px"
+>&lt;/p>
 &lt;p>After that, just enable “underlay map”, and set it to “Strava heatmap”. You might also need to set “map source” back to “Offline vector maps” if OsmAnd changes to only the heatmap.&lt;/p>
 &lt;p>If it stops working; Strava probably logged you out, you’ll need to do the whole URL assembly-copy-paste thing again - but you can do “select existing” in the OsmAnd “Define/edit” dialog to just update the URL.&lt;/p>
 &lt;p>Have fun!&lt;/p></description></item></channel></rss>
