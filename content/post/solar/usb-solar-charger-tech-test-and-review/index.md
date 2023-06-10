@@ -32,14 +32,14 @@ Inside, the circuit board is very simple, with all all components on the top.:
 
 ![USB PCB top side](board-top.jpg)
 
-* An NS6326 switching regulator, 4-30v input, fixed 5v output, with it's associated inductor, and input and output capacitors.
+* An NS6326 switching regulator, 4-30v input, fixed 5v output, with it's associated inductor, and input and output capacitors. It mostly matches the datasheet schemtic.
 * An indicator LED + resistor, powered form the 5v output
 * An unpopulated, unused DC output connector, providing the full voltage of the panel (through a diode which is unused, in this case). I guess the diode is populated despite being unneeded, so that they can make multiple versions of the board, with or without the DC output, since making a single version of the board, with a wasted component, is cheaper than two versions.
 * Two USB ports. The data pins are shorted together. The USB ports feel OK, quality-wise, though not amazing.
 
 The back side is completely devoid of components. There is a hole cut in the PCB to accommodate for the capacitors, even though there is enough horizontal space in the case. This is perhaps another cost-cutting measure, since the PCB milling is essentially free during manufacture, and having a defined place for the capacitor to sit into can make hand-soldering quicker (and they do indeed look hand soldered):
 
-[!USB PCB bottom side](board-bottom.jpg)
+![USB PCB bottom side](board-bottom.jpg)
 
 I will update this review once I've used this charger for some time.
 
