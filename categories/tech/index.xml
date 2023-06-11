@@ -15,6 +15,7 @@ data-flex-grow="137"
 data-flex-basis="328px"
 >&lt;/p>
 &lt;p>In some quick testing, on a very sunny day in France, I was able to get around 6w, which suggests to me that in reality it is a 10w panel. It was advertised on AliExpress as being 15w.&lt;/p>
+&lt;p>It is also advertised as IPX6, but it&amp;rsquo;s definitely not: the USB module does not have any kind of waterproofing, sealing, or conformal coating. It might be OK to use with gentle rain from above, with the USB part protected from the rain by the panel, but that&amp;rsquo;s about it.&lt;/p>
 &lt;p>The USB module seems to be decently well glued on, however other similar panels are known for it falling off, so I would still exercise caution (those fragile eyelets will fit a USB cable through, and can thus provide strain relief). The ports are &amp;ldquo;right way up&amp;rdquo;, meaning the screen of a USB meter would face the back of the panel, meaning you cannot see what it shows.&lt;/p>
 &lt;p>It can be opened by prying off the top plastic sheet, and removing 4 screws holding the top cover on. The top cover has a 3d-printed look, despite being injection molded. Perhaps a 3d printed part was used to make the initial mould:&lt;/p>
 &lt;p>&lt;img src="https://jonas.bike/whats-inside-a-direct-to-usb-solar-charger-how-they-work-and-review-of-a-new-15w-etfe-one/usb-box.jpg"
