@@ -11,7 +11,7 @@ tags:
 ---
 # Review of the 15w ETFE USB panel
 
-I've recently bought a small solar panel for USB charging, primarily for bicyclecycle touring. Since I have not seen any other reviews or information about this style of panel, or even a good general description of how they work, this is it.
+I've recently bought a small solar panel for USB charging, primarily for bicycle touring. Since I have not seen any other reviews or information about this style of panel, or even a good general description of how they work, this is it.
 
 I bought this one because it seemed to be made of the newer ETFE material (which is supposedly more durable). It has a dimpled, textured surface just like other panels that you can find by looking for "ETFE". It is branded "Folding", although there are many brands and listings for it, as is typical with generic producs from China.
 
