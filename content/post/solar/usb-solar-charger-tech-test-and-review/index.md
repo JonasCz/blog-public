@@ -54,7 +54,7 @@ Pretty much every small direct-to-USB solar panel uses the same basic formula:
 
 So why the 6v panel, with 5v buck converter? Because solar panels inherently have a voltage-current curve: the more current you draw from a solar panel, the lower the voltage will become. Usually the curve looks something like this:
 
-![Current-voltage curve(Current-voltage-IV-curve.png)
+![Current-voltage curve](Current-voltage-IV-curve.png)
 
 This is why MPPT ("maximum power point tracking") battery chargers exist: they can regulate how much current they take from the panel, in order to not take too much current (thus making the voltage & power output collapse), or too little.
 
