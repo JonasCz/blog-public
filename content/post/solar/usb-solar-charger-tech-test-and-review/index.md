@@ -1,6 +1,6 @@
 ---
 title: "What's inside a direct-to-USB solar charger, how they work, and review of a new 15w ETFE one"
-date: 2023-07-10T14:52:10+01:00
+date: 2023-06-10T14:52:10+01:00
 draft: false
 image: solar-panel-full.jpg
 categories:
