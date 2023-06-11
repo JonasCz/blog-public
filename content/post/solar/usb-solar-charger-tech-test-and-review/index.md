@@ -23,6 +23,8 @@ The inner area where the cells are is quite stiff, and feels sturdy and durable.
 
 In some quick testing, on a very sunny day in France, I was able to get around 6w, which suggests to me that in reality it is a 10w panel. It was advertised on AliExpress as being 15w.
 
+It is also advertised as IPX6, but it's definitely not: the USB module does not have any kind of waterproofing, sealing, or conformal coating. It might be OK to use with gentle rain from above, with the USB part protected from the rain by the panel, but that's about it.
+
 The USB module seems to be decently well glued on, however other similar panels are known for it falling off, so I would still exercise caution (those fragile eyelets will fit a USB cable through, and can thus provide strain relief). The ports are "right way up", meaning the screen of a USB meter would face the back of the panel, meaning you cannot see what it shows.
 
 It can be opened by prying off the top plastic sheet, and removing 4 screws holding the top cover on. The top cover has a 3d-printed look, despite being injection molded. Perhaps a 3d printed part was used to make the initial mould:
