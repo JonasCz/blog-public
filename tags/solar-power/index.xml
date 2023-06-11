@@ -64,9 +64,15 @@ data-flex-basis="283px"
 &lt;li>On fancier models, sometimes an additional IC or timer to periodically power-cycle the output, absent on this one.&lt;/li>
 &lt;/ul>
 &lt;p>So why the 6v panel, with 5v buck converter? Because solar panels inherently have a voltage-current curve: the more current you draw from a solar panel, the lower the voltage will become. Usually the curve looks something like this:&lt;/p>
-&lt;p>&lt;img src="https://jonas.bike/Current-voltage-IV-curve.png"
+&lt;p>&lt;img src="https://jonas.bike/whats-inside-a-direct-to-usb-solar-charger-how-they-work-and-review-of-a-new-15w-etfe-one/Current-voltage-IV-curve.png"
+width="1500"
+height="1000"
+srcset="https://jonas.bike/whats-inside-a-direct-to-usb-solar-charger-how-they-work-and-review-of-a-new-15w-etfe-one/Current-voltage-IV-curve_hu3f36cd254cd58bf9e5b90ad930b479bd_444649_480x0_resize_box_3.png 480w, https://jonas.bike/whats-inside-a-direct-to-usb-solar-charger-how-they-work-and-review-of-a-new-15w-etfe-one/Current-voltage-IV-curve_hu3f36cd254cd58bf9e5b90ad930b479bd_444649_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="Current-voltage-IV-curve.png"
+class="gallery-image"
+data-flex-grow="150"
+data-flex-basis="360px"
 >&lt;/p>
 &lt;p>This is why MPPT (&amp;ldquo;maximum power point tracking&amp;rdquo;) battery chargers exist: they can regulate how much current they take from the panel, in order to not take too much current (thus making the voltage &amp;amp; power output collapse), or too little.&lt;/p>
 &lt;p>With USB, we don&amp;rsquo;t have quite so much luxury: USB devices always expect 5v, however, this does happen to be pretty close to the maximum power point of a typical 6v-max panel, making it a good choice.&lt;/p>
