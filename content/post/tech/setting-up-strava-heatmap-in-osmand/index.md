@@ -55,6 +55,6 @@ It should look something like this:
 
 After that, just enable “underlay map”, and set it to “Strava heatmap”. You might also need to set “map source” back to “Offline vector maps” if OsmAnd changes to only the heatmap.
 
-If it stops working; Strava probably logged you out, you’ll need to do the whole URL assembly-copy-paste thing again - but you can do “select existing” in the OsmAnd “Define/edit” dialog to just update the URL.
+If it stops working; Strava probably logged you out (usually after about a week), you’ll need to do the whole URL assembly-copy-paste thing again - but instead, you can go to the "download maps" screen, then "Local", and here you can update the entry.
 
 Have fun!
