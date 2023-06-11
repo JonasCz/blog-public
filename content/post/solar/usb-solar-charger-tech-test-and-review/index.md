@@ -8,7 +8,6 @@ categories:
 tags:
 - Solar power
 ---
-
 # Review of the 15w ETFE USB panel
 
 I've recently bought a small solar panel for USB charging devices, primarily for cycle touring. Since I have not seen any other review or information about this style of panel, or even a good general description of how they work, this is it.
