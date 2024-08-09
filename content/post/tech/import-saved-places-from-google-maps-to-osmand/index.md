@@ -2,7 +2,7 @@
 title: "How to export saved places from Google Maps as GPX for OsmAnd"
 date: 2024-08-08T12:59:10+01:00
 draft: false
-image: screenshot-google-maps-saved-places.avif
+image: screenshot-google-maps-saved-places.jpg
 categories:
 - Apps & software
 tags:
