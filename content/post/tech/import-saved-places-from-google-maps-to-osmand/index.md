@@ -18,12 +18,12 @@ There is however Google Takout, which does offer a CSV file with links to Google
 
 Pick "JSON" when you download after it finishes.
 
-**3.** Upload the resulting JSON file below, to convert it to a GPX file. This one works locally in your browser and doesn't send your data anywhere. You may include a "type" field, this will group the places together as one folder in OsmAnd, otherwise they will be in separate folders based on how Google Maps has categorized them.
+**3.** Upload the resulting JSON file below, to convert it to a GPX file. This one works locally in your browser and doesn't send your data anywhere. You may give them a name using the "category" field, this will group the places together as one folder in OsmAnd, otherwise they will be in separate folders based on how Google Maps has categorized them.
 
 {{<post_how-to-export-saved-places-from-google-maps-as-gpx-for-osmand>}}
 
 Once you have your GPX file, go to "My Places" in OsmAnd and choose + (add), and pick the GPX file you downloaded above, and now your saved places should be available in OsmAnd:
 
-![Screenshot of saved places in OsmAnd](screenshot-osmand-saved-places.avif).
+![Screenshot of saved places in OsmAnd](screenshot-osmand-saved-places.jpg).
 
 I hope this helps someone in their travels!
