@@ -6,7 +6,17 @@
 >https://exportgooglemaps.com/&lt;/a>. Disclaimer: This isn&amp;rsquo;t my service, and it doesn&amp;rsquo;t have a privacy policy that I can see, so it&amp;rsquo;s up to you weather you trust it with your places.&lt;/p>
 &lt;p>Pick &amp;ldquo;JSON&amp;rdquo; when you download after it finishes.&lt;/p>
 &lt;p>&lt;strong>3.&lt;/strong> Upload the resulting JSON file below, to convert it to a GPX file. This one works locally in your browser and doesn&amp;rsquo;t send your data anywhere. You may include a &amp;ldquo;type&amp;rdquo; field, this will group the places together as one folder in OsmAnd, otherwise they will be in separate folders based on how Google Maps has categorized them.&lt;/p>
-&lt;!-- raw HTML omitted -->
+&lt;div>
+&lt;h1>JSON to GPX Converter&lt;/h1>
+&lt;input type="file" id="fileInput" accept=".json">
+&lt;!-- Add this new input field for type -->
+&lt;br>
+&lt;label for="typeInput">Type (optional):&lt;/label>
+&lt;input type="text" id="typeInput" placeholder="Enter type for all items">
+&lt;br>
+&lt;button onclick="convertToJson()">Convert to GPX&lt;/button>
+&lt;br>
+&lt;a id="downloadLink" style="display:none;">Download GPX&lt;/a>
 &lt;pre>&lt;code>&amp;lt;script&amp;gt;
 function convertToJson() {
 const fileInput = document.getElementById('fileInput');
@@ -49,10 +59,15 @@ const description = encodeXml(entry.description || &amp;quot;No description avai
 const type = encodeXml(customType);
 gpxContent += `
 &lt;/code>&lt;/pre>
-&lt;!-- raw HTML omitted -->
+&lt;wpt lat="${lat}" lon="${lon}">
+&lt;name>${name}&lt;/name>
+&lt;desc>${description}&lt;/desc>
+&lt;type>${type}&lt;/type>
+&lt;/wpt>`;
+});
 &lt;pre>&lt;code>gpxContent += `
 &lt;/code>&lt;/pre>
-&lt;p>&lt;!-- raw HTML omitted -->`;
+&lt;p>&lt;/gpx>`;
 return gpxContent;
 }&lt;/p>
 &lt;p>function encodeXml(text) {
@@ -64,7 +79,7 @@ return text.replace(/&amp;amp;/g, &amp;ldquo;&amp;amp;&amp;rdquo;)
 }&lt;/p>
 &lt;pre>&lt;code>&amp;lt;/script&amp;gt;
 &lt;/code>&lt;/pre>
-&lt;!-- raw HTML omitted -->
+&lt;/div>
 &lt;p>Once you have your GPX file, go to &amp;ldquo;My Places&amp;rdquo; in OsmAnd and choose + (add), and pick the GPX file you downloaded above.&lt;/p></description></item><item><title>What's inside a direct-to-USB solar charger, how they work, and review of a new 15w ETFE one</title><link>https://jonas.bike/whats-inside-a-direct-to-usb-solar-charger-how-they-work-and-review-of-a-new-15w-etfe-one/</link><pubDate>Sat, 10 Jun 2023 14:52:10 +0100</pubDate><guid>https://jonas.bike/whats-inside-a-direct-to-usb-solar-charger-how-they-work-and-review-of-a-new-15w-etfe-one/</guid><description>&lt;img src="https://jonas.bike/whats-inside-a-direct-to-usb-solar-charger-how-they-work-and-review-of-a-new-15w-etfe-one/solar-panel-full.jpg" alt="Featured image of post What's inside a direct-to-USB solar charger, how they work, and review of a new 15w ETFE one" />&lt;h1 id="review-of-the-15w-etfe-usb-panel">Review of the 15w ETFE USB panel&lt;/h1>
 &lt;p>I&amp;rsquo;ve recently bought a small solar panel for USB charging, primarily for bicycle touring. Since I have not seen any other reviews or information about this style of panel, or even a good general description of how they work, this is it.&lt;/p>
 &lt;p>I bought this one because it seemed to be made of the newer ETFE material (which is supposedly more durable). It has a dimpled, textured surface just like other panels that you can find by looking for &amp;ldquo;ETFE&amp;rdquo;. It is branded &amp;ldquo;Folding&amp;rdquo;, although there are many brands and listings for it, as is typical with generic producs from China.&lt;/p>

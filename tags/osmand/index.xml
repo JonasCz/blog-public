@@ -6,7 +6,17 @@
 >https://exportgooglemaps.com/&lt;/a>. Disclaimer: This isn&amp;rsquo;t my service, and it doesn&amp;rsquo;t have a privacy policy that I can see, so it&amp;rsquo;s up to you weather you trust it with your places.&lt;/p>
 &lt;p>Pick &amp;ldquo;JSON&amp;rdquo; when you download after it finishes.&lt;/p>
 &lt;p>&lt;strong>3.&lt;/strong> Upload the resulting JSON file below, to convert it to a GPX file. This one works locally in your browser and doesn&amp;rsquo;t send your data anywhere. You may include a &amp;ldquo;type&amp;rdquo; field, this will group the places together as one folder in OsmAnd, otherwise they will be in separate folders based on how Google Maps has categorized them.&lt;/p>
-&lt;!-- raw HTML omitted -->
+&lt;div>
+&lt;h1>JSON to GPX Converter&lt;/h1>
+&lt;input type="file" id="fileInput" accept=".json">
+&lt;!-- Add this new input field for type -->
+&lt;br>
+&lt;label for="typeInput">Type (optional):&lt;/label>
+&lt;input type="text" id="typeInput" placeholder="Enter type for all items">
+&lt;br>
+&lt;button onclick="convertToJson()">Convert to GPX&lt;/button>
+&lt;br>
+&lt;a id="downloadLink" style="display:none;">Download GPX&lt;/a>
 &lt;pre>&lt;code>&amp;lt;script&amp;gt;
 function convertToJson() {
 const fileInput = document.getElementById('fileInput');
@@ -49,10 +59,15 @@ const description = encodeXml(entry.description || &amp;quot;No description avai
 const type = encodeXml(customType);
 gpxContent += `
 &lt;/code>&lt;/pre>
-&lt;!-- raw HTML omitted -->
+&lt;wpt lat="${lat}" lon="${lon}">
+&lt;name>${name}&lt;/name>
+&lt;desc>${description}&lt;/desc>
+&lt;type>${type}&lt;/type>
+&lt;/wpt>`;
+});
 &lt;pre>&lt;code>gpxContent += `
 &lt;/code>&lt;/pre>
-&lt;p>&lt;!-- raw HTML omitted -->`;
+&lt;p>&lt;/gpx>`;
 return gpxContent;
 }&lt;/p>
 &lt;p>function encodeXml(text) {
@@ -64,7 +79,7 @@ return text.replace(/&amp;amp;/g, &amp;ldquo;&amp;amp;&amp;rdquo;)
 }&lt;/p>
 &lt;pre>&lt;code>&amp;lt;/script&amp;gt;
 &lt;/code>&lt;/pre>
-&lt;!-- raw HTML omitted -->
+&lt;/div>
 &lt;p>Once you have your GPX file, go to &amp;ldquo;My Places&amp;rdquo; in OsmAnd and choose + (add), and pick the GPX file you downloaded above.&lt;/p></description></item><item><title>Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay</title><link>https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</link><pubDate>Thu, 28 Nov 2019 12:59:10 +0100</pubDate><guid>https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</guid><description>&lt;img src="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot.jpg" alt="Featured image of post Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay" />&lt;p>&lt;strong>2022 update:&lt;/strong> this still works; however the OsmAnd interface looks slightly different now.&lt;/p>
 &lt;p>I’ve recently come across GeoVelo, which offers a map which clearly shows cycling infrastructure even when zoomed out to a country-level overview, which is a great way to have an overview for trip planning, which is’t possible with the offline OsmAnd maps, since cycleways are only shown when zoomed in far enough in OsmAnd. Even with a custom rendering.xml it’s still not possible to get an overview of cycle infrastructure on a country or region level, due to the way the cycleway information is baked into the offline map files. (Side note: GeoVelo also offers their own app - no offline functionality however)&lt;/p>
 &lt;p>But - the GeoVelo tiles can be used as an overlay in OsmAnd, to offer an overview, even when zoomed out - it can even be combined with the above mentioned customized rendering.xml for close zoom levels, and the online GeoVelo maps when zoomed out (OsmAnd will cache the tiles for offline use).&lt;/p>
