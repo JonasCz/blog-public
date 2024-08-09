@@ -2,7 +2,7 @@
 title: "How to export saved places from Google Maps as GPX for OsmAnd"
 date: 2024-08-08T12:59:10+01:00
 draft: false
-image: screenshot.jpg
+image: screenshot-google-maps-saved-places.avif
 categories:
 - Apps & software
 tags:
@@ -20,90 +20,10 @@ Pick "JSON" when you download after it finishes.
 
 **3.** Upload the resulting JSON file below, to convert it to a GPX file. This one works locally in your browser and doesn't send your data anywhere. You may include a "type" field, this will group the places together as one folder in OsmAnd, otherwise they will be in separate folders based on how Google Maps has categorized them.
 
-<div>
-    <h1>JSON to GPX Converter</h1>
-    <input type="file" id="fileInput" accept=".json">
-	<!-- Add this new input field for type -->
-	<br>
-<label for="typeInput">Type (optional):</label>
-<input type="text" id="typeInput" placeholder="Enter type for all items">
-<br>
- <button onclick="convertToJson()">Convert to GPX</button>
- <br>
-    <a id="downloadLink" style="display:none;">Download GPX</a>
+{{<post_how-to-export-saved-places-from-google-maps-as-gpx-for-osmand>}}
 
-    <script>
-        function convertToJson() {
-    const fileInput = document.getElementById('fileInput');
-    const customType = document.getElementById('typeInput').value || "Unknown";
-    const file = fileInput.files[0];
+Once you have your GPX file, go to "My Places" in OsmAnd and choose + (add), and pick the GPX file you downloaded above, and now your saved places should be available in OsmAnd:
 
-    if (!file) {
-        alert("Please select a file first!");
-        return;
-    }
+![Screenshot of saved places in OsmAnd](screenshot-osmand-saved-places.avif).
 
-    const reader = new FileReader();
-    reader.onload = function(event) {
-        const jsonData = JSON.parse(event.target.result);
-        const skippedItems = [];
-        const gpxData = jsonToGpx(jsonData, skippedItems, customType);
-        
-        if (skippedItems.length > 0) {
-            alert("Skipped the following items due to missing GPS data:\n" + skippedItems.join('\n'));
-        }
-
-        const blob = new Blob([gpxData], { type: 'application/gpx+xml' });
-        const url = URL.createObjectURL(blob);
-
-        const downloadLink = document.getElementById('downloadLink');
-        downloadLink.href = url;
-        downloadLink.download = 'converted.gpx';
-        downloadLink.style.display = 'block';
-        downloadLink.textContent = 'Download GPX File';
-    };
-    reader.readAsText(file);
-}
-
-function jsonToGpx(jsonData, skippedItems, customType) {
-    let gpxContent = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="JSON to GPX Converter">
-`;
-
-    jsonData.forEach(entry => {
-        if (!entry.gps || !entry.gps.lat || !entry.gps.lng) {
-            skippedItems.push(entry.name || "Unnamed item");
-            return;
-        }
-
-        const name = encodeXml(entry.name || "Unnamed");
-        const lat = entry.gps.lat;
-        const lon = entry.gps.lng;
-        const description = encodeXml(entry.description || "No description available.");
-        const type = encodeXml(customType);
-
-        gpxContent += `
-<wpt lat="${lat}" lon="${lon}">
-    <name>${name}</name>
-    <desc>${description}</desc>
-    <type>${type}</type>
-</wpt>`;
-    });
-
-    gpxContent += `
-</gpx>`;
-    return gpxContent;
-}
-
-function encodeXml(text) {
-    return text.replace(/&/g, "&amp;")
-               .replace(/</g, "&lt;")
-               .replace(/>/g, "&gt;")
-               .replace(/"/g, "&quot;")
-               .replace(/'/g, "&apos;");
-}
-
-    </script>
-</div>
-
-Once you have your GPX file, go to "My Places" in OsmAnd and choose + (add), and pick the GPX file you downloaded above.
+I hope this helps someone in their travels!

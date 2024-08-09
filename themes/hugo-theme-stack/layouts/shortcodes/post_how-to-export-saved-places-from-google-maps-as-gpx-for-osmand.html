@@ -1,0 +1,84 @@
+<div>
+    <input type="file" id="fileInput" accept=".json">
+	<!-- Add this new input field for type -->
+	<br>
+<label for="typeInput">Type (optional):</label>
+<input type="text" id="typeInput" placeholder="Enter type for all items">
+<br>
+ <button onclick="convertToJson()">Convert to GPX</button>
+ <br>
+    <a id="downloadLink" style="display:none;">Download GPX</a>
+
+    <script>
+        function convertToJson() {
+    const fileInput = document.getElementById('fileInput');
+    const customType = document.getElementById('typeInput').value || "Unknown";
+    const file = fileInput.files[0];
+
+    if (!file) {
+        alert("Please select a file first!");
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function(event) {
+        const jsonData = JSON.parse(event.target.result);
+        const skippedItems = [];
+        const gpxData = jsonToGpx(jsonData, skippedItems, customType);
+        
+        if (skippedItems.length > 0) {
+            alert("Skipped the following items due to missing GPS data:\n" + skippedItems.join('\n'));
+        }
+
+        const blob = new Blob([gpxData], { type: 'application/gpx+xml' });
+        const url = URL.createObjectURL(blob);
+
+        const downloadLink = document.getElementById('downloadLink');
+        downloadLink.href = url;
+        downloadLink.download = 'converted.gpx';
+        downloadLink.style.display = 'block';
+        downloadLink.textContent = 'Download GPX File';
+    };
+    reader.readAsText(file);
+}
+
+function jsonToGpx(jsonData, skippedItems, customType) {
+    let gpxContent = `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="JSON to GPX Converter">
+`;
+
+    jsonData.forEach(entry => {
+        if (!entry.gps || !entry.gps.lat || !entry.gps.lng) {
+            skippedItems.push(entry.name || "Unnamed item");
+            return;
+        }
+
+        const name = encodeXml(entry.name || "Unnamed");
+        const lat = entry.gps.lat;
+        const lon = entry.gps.lng;
+        const description = encodeXml(entry.description || "No description available.");
+        const type = encodeXml(customType);
+
+        gpxContent += `
+<wpt lat="${lat}" lon="${lon}">
+    <name>${name}</name>
+    <desc>${description}</desc>
+    <type>${type}</type>
+</wpt>`;
+    });
+
+    gpxContent += `
+</gpx>`;
+    return gpxContent;
+}
+
+function encodeXml(text) {
+    return text.replace(/&/g, "&amp;")
+               .replace(/</g, "&lt;")
+               .replace(/>/g, "&gt;")
+               .replace(/"/g, "&quot;")
+               .replace(/'/g, "&apos;");
+}
+
+    </script>
+</div>
