@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Jonas's blog</title><link>https://jonas.bike/post/</link><description>Recent content in Posts on Jonas's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 08 Aug 2024 12:59:10 +0100</lastBuildDate><atom:link href="https://jonas.bike/post/index.xml" rel="self" type="application/rss+xml"/><item><title>How to export saved places from Google Maps as GPX for OsmAnd</title><link>https://jonas.bike/how-to-export-saved-places-from-google-maps-as-gpx-for-osmand/</link><pubDate>Thu, 08 Aug 2024 12:59:10 +0100</pubDate><guid>https://jonas.bike/how-to-export-saved-places-from-google-maps-as-gpx-for-osmand/</guid><description>&lt;img src="https://jonas.bike/screenshot.jpg" alt="Featured image of post How to export saved places from Google Maps as GPX for OsmAnd" />&lt;p>For my next big bike trip, I&amp;rsquo;ve been collecting interesting places that I might want to visit, using Google Maps. Now, I&amp;rsquo;d like to import them into OsmAnd, my offline navigation app of choice. OsmAnd can import GPX files, however Google maps won&amp;rsquo;t let you export your saved places in a usable format such as GPX, which I&amp;rsquo;m guessing is because they&amp;rsquo;d rather you not leave Google Maps and take your data with you.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Jonas's blog</title><link>https://jonas.bike/post/</link><description>Recent content in Posts on Jonas's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 08 Aug 2024 12:59:10 +0100</lastBuildDate><atom:link href="https://jonas.bike/post/index.xml" rel="self" type="application/rss+xml"/><item><title>How to export saved places from Google Maps as GPX for OsmAnd</title><link>https://jonas.bike/how-to-export-saved-places-from-google-maps-as-gpx-for-osmand/</link><pubDate>Thu, 08 Aug 2024 12:59:10 +0100</pubDate><guid>https://jonas.bike/how-to-export-saved-places-from-google-maps-as-gpx-for-osmand/</guid><description>&lt;img src="https://jonas.bike/how-to-export-saved-places-from-google-maps-as-gpx-for-osmand/screenshot-google-maps-saved-places.jpg" alt="Featured image of post How to export saved places from Google Maps as GPX for OsmAnd" />&lt;p>For my next big bike trip, I&amp;rsquo;ve been collecting interesting places that I might want to visit, using Google Maps. Now, I&amp;rsquo;d like to import them into OsmAnd, my offline navigation app of choice. OsmAnd can import GPX files, however Google maps won&amp;rsquo;t let you export your saved places in a usable format such as GPX, which I&amp;rsquo;m guessing is because they&amp;rsquo;d rather you not leave Google Maps and take your data with you.&lt;/p>
 &lt;p>There is however Google Takout, which does offer a CSV file with links to Google Maps and not much else. This needs to be converted to a GPX file with coordinates to be able to use it with another app such as OsmAnd.&lt;/p>
 &lt;p>&lt;strong>1.&lt;/strong> Go to &lt;a class="link" href="https://takeout.google.com/" target="_blank" rel="noopener"
 >Google Takeout&lt;/a>, then choose &amp;ldquo;deselect all&amp;rdquo; at the top of the list (to ensure you&amp;rsquo;re only getting your Maps data), then select &amp;ldquo;Saved&amp;rdquo; (Not any of the other &amp;ldquo;Maps&amp;rdquo; related items). Proceed with the Google Takeout export, at then end you&amp;rsquo;ll be emailed a zip file containing a &amp;ldquo;Saved&amp;rdquo; folder, with a csv file inside for each of your place lists.&lt;/p>
@@ -7,9 +7,7 @@
 &lt;p>Pick &amp;ldquo;JSON&amp;rdquo; when you download after it finishes.&lt;/p>
 &lt;p>&lt;strong>3.&lt;/strong> Upload the resulting JSON file below, to convert it to a GPX file. This one works locally in your browser and doesn&amp;rsquo;t send your data anywhere. You may include a &amp;ldquo;type&amp;rdquo; field, this will group the places together as one folder in OsmAnd, otherwise they will be in separate folders based on how Google Maps has categorized them.&lt;/p>
 &lt;div>
-&lt;h1>JSON to GPX Converter&lt;/h1>
 &lt;input type="file" id="fileInput" accept=".json">
-&lt;!-- Add this new input field for type -->
 &lt;br>
 &lt;label for="typeInput">Type (optional):&lt;/label>
 &lt;input type="text" id="typeInput" placeholder="Enter type for all items">
@@ -17,13 +15,13 @@
 &lt;button onclick="convertToJson()">Convert to GPX&lt;/button>
 &lt;br>
 &lt;a id="downloadLink" style="display:none;">Download GPX&lt;/a>
-&lt;pre>&lt;code>&amp;lt;script&amp;gt;
+&lt;script>
 function convertToJson() {
 const fileInput = document.getElementById('fileInput');
-const customType = document.getElementById('typeInput').value || &amp;quot;Unknown&amp;quot;;
+const customType = document.getElementById('typeInput').value || "Unknown";
 const file = fileInput.files[0];
 if (!file) {
-alert(&amp;quot;Please select a file first!&amp;quot;);
+alert("Please select a file first!");
 return;
 }
 const reader = new FileReader();
@@ -31,8 +29,8 @@ reader.onload = function(event) {
 const jsonData = JSON.parse(event.target.result);
 const skippedItems = [];
 const gpxData = jsonToGpx(jsonData, skippedItems, customType);
-if (skippedItems.length &amp;gt; 0) {
-alert(&amp;quot;Skipped the following items due to missing GPS data:\n&amp;quot; + skippedItems.join('\n'));
+if (skippedItems.length > 0) {
+alert("Skipped the following items due to missing GPS data:\n" + skippedItems.join('\n'));
 }
 const blob = new Blob([gpxData], { type: 'application/gpx+xml' });
 const url = URL.createObjectURL(blob);
@@ -43,44 +41,47 @@ downloadLink.style.display = 'block';
 downloadLink.textContent = 'Download GPX File';
 };
 reader.readAsText(file);
-&lt;/code>&lt;/pre>
-&lt;p>}&lt;/p>
-&lt;p>function jsonToGpx(jsonData, skippedItems, customType) {
-let gpxContent = &lt;code>&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;gpx version=&amp;quot;1.1&amp;quot; creator=&amp;quot;JSON to GPX Converter&amp;quot;&amp;gt; &lt;/code>;&lt;/p>
-&lt;pre>&lt;code>jsonData.forEach(entry =&amp;gt; {
+}
+function jsonToGpx(jsonData, skippedItems, customType) {
+let gpxContent = `&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;gpx version="1.1" creator="JSON to GPX Converter">
+`;
+jsonData.forEach(entry => {
 if (!entry.gps || !entry.gps.lat || !entry.gps.lng) {
-skippedItems.push(entry.name || &amp;quot;Unnamed item&amp;quot;);
+skippedItems.push(entry.name || "Unnamed item");
 return;
 }
-const name = encodeXml(entry.name || &amp;quot;Unnamed&amp;quot;);
+const name = encodeXml(entry.name || "Unnamed");
 const lat = entry.gps.lat;
 const lon = entry.gps.lng;
-const description = encodeXml(entry.description || &amp;quot;No description available.&amp;quot;);
+const description = encodeXml(entry.description || "No description available.");
 const type = encodeXml(customType);
 gpxContent += `
-&lt;/code>&lt;/pre>
 &lt;wpt lat="${lat}" lon="${lon}">
 &lt;name>${name}&lt;/name>
 &lt;desc>${description}&lt;/desc>
 &lt;type>${type}&lt;/type>
 &lt;/wpt>`;
 });
-&lt;pre>&lt;code>gpxContent += `
-&lt;/code>&lt;/pre>
-&lt;p>&lt;/gpx>`;
+gpxContent += `
+&lt;/gpx>`;
 return gpxContent;
-}&lt;/p>
-&lt;p>function encodeXml(text) {
-return text.replace(/&amp;amp;/g, &amp;ldquo;&amp;amp;&amp;rdquo;)
-.replace(/&amp;lt;/g, &amp;ldquo;&amp;lt;&amp;rdquo;)
-.replace(/&amp;gt;/g, &amp;ldquo;&amp;gt;&amp;rdquo;)
-.replace(/&amp;quot;/g, &amp;ldquo;&amp;quot;&amp;rdquo;)
-.replace(/&amp;rsquo;/g, &amp;ldquo;'&amp;rdquo;);
-}&lt;/p>
-&lt;pre>&lt;code>&amp;lt;/script&amp;gt;
-&lt;/code>&lt;/pre>
+}
+function encodeXml(text) {
+return text.replace(/&amp;/g, "&amp;amp;")
+.replace(/&lt;/g, "&amp;lt;")
+.replace(/>/g, "&amp;gt;")
+.replace(/"/g, "&amp;quot;")
+.replace(/'/g, "&amp;apos;");
+}
+&lt;/script>
 &lt;/div>
-&lt;p>Once you have your GPX file, go to &amp;ldquo;My Places&amp;rdquo; in OsmAnd and choose + (add), and pick the GPX file you downloaded above.&lt;/p></description></item><item><title>What's inside a direct-to-USB solar charger, how they work, and review of a new 15w ETFE one</title><link>https://jonas.bike/whats-inside-a-direct-to-usb-solar-charger-how-they-work-and-review-of-a-new-15w-etfe-one/</link><pubDate>Sat, 10 Jun 2023 14:52:10 +0100</pubDate><guid>https://jonas.bike/whats-inside-a-direct-to-usb-solar-charger-how-they-work-and-review-of-a-new-15w-etfe-one/</guid><description>&lt;img src="https://jonas.bike/whats-inside-a-direct-to-usb-solar-charger-how-they-work-and-review-of-a-new-15w-etfe-one/solar-panel-full.jpg" alt="Featured image of post What's inside a direct-to-USB solar charger, how they work, and review of a new 15w ETFE one" />&lt;h1 id="review-of-the-15w-etfe-usb-panel">Review of the 15w ETFE USB panel&lt;/h1>
+&lt;p>Once you have your GPX file, go to &amp;ldquo;My Places&amp;rdquo; in OsmAnd and choose + (add), and pick the GPX file you downloaded above, and now your saved places should be available in OsmAnd:&lt;/p>
+&lt;p>&lt;img src="https://jonas.bike/screenshot-osmand-saved-places.avif"
+loading="lazy"
+alt="Screenshot of saved places in OsmAnd"
+>.&lt;/p>
+&lt;p>I hope this helps someone in their travels!&lt;/p></description></item><item><title>What's inside a direct-to-USB solar charger, how they work, and review of a new 15w ETFE one</title><link>https://jonas.bike/whats-inside-a-direct-to-usb-solar-charger-how-they-work-and-review-of-a-new-15w-etfe-one/</link><pubDate>Sat, 10 Jun 2023 14:52:10 +0100</pubDate><guid>https://jonas.bike/whats-inside-a-direct-to-usb-solar-charger-how-they-work-and-review-of-a-new-15w-etfe-one/</guid><description>&lt;img src="https://jonas.bike/whats-inside-a-direct-to-usb-solar-charger-how-they-work-and-review-of-a-new-15w-etfe-one/solar-panel-full.jpg" alt="Featured image of post What's inside a direct-to-USB solar charger, how they work, and review of a new 15w ETFE one" />&lt;h1 id="review-of-the-15w-etfe-usb-panel">Review of the 15w ETFE USB panel&lt;/h1>
 &lt;p>I&amp;rsquo;ve recently bought a small solar panel for USB charging, primarily for bicycle touring. Since I have not seen any other reviews or information about this style of panel, or even a good general description of how they work, this is it.&lt;/p>
 &lt;p>I bought this one because it seemed to be made of the newer ETFE material (which is supposedly more durable). It has a dimpled, textured surface just like other panels that you can find by looking for &amp;ldquo;ETFE&amp;rdquo;. It is branded &amp;ldquo;Folding&amp;rdquo;, although there are many brands and listings for it, as is typical with generic producs from China.&lt;/p>
 &lt;p>It was much heavier than I expected, mine weighs 338 grams. (For comparison, various panels that are advertised at 10w, &lt;a class="link" href="https://threepointsofthecompass.com/2021/07/31/gear-chat-lightweight-solar-panels/" target="_blank" rel="noopener"
