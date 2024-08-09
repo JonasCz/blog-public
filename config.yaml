@@ -1,7 +1,7 @@
 baseurl: https://jonas.bike
 languageCode: en-us
 theme: hugo-theme-stack
-paginate: 5
+paginate: 10
 title: Jonas's blog
 
 languages:
@@ -213,7 +213,7 @@ markup:
     goldmark:
         renderer:
             ## Set to true if you have HTML content inside Markdown
-            unsafe: false
+            unsafe: true
     tableOfContents:
         endLevel: 4
         ordered: true
