@@ -1,11 +1,78 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apps &amp; software on Jonas's blog</title><link>https://jonas.bike/categories/apps-software/</link><description>Recent content in Apps &amp; software on Jonas's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 28 Nov 2019 12:59:10 +0100</lastBuildDate><atom:link href="https://jonas.bike/categories/apps-software/index.xml" rel="self" type="application/rss+xml"/><item><title>Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay</title><link>https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</link><pubDate>Thu, 28 Nov 2019 12:59:10 +0100</pubDate><guid>https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</guid><description>&lt;img src="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot.jpg" alt="Featured image of post Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay" />&lt;p>&lt;strong>2022 update:&lt;/strong> this still works; however the OsmAnd interface looks slightly different now.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apps &amp; Software on Jonas's blog</title><link>https://jonas.bike/categories/apps--software/</link><description>Recent content in Apps &amp; Software on Jonas's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 08 Aug 2024 12:59:10 +0100</lastBuildDate><atom:link href="https://jonas.bike/categories/apps--software/index.xml" rel="self" type="application/rss+xml"/><item><title>How to export saved places from Google Maps as GPX for OsmAnd</title><link>https://jonas.bike/how-to-export-saved-places-from-google-maps-as-gpx-for-osmand/</link><pubDate>Thu, 08 Aug 2024 12:59:10 +0100</pubDate><guid>https://jonas.bike/how-to-export-saved-places-from-google-maps-as-gpx-for-osmand/</guid><description>&lt;img src="https://jonas.bike/screenshot.jpg" alt="Featured image of post How to export saved places from Google Maps as GPX for OsmAnd" />&lt;p>For my next big bike trip, I&amp;rsquo;ve been collecting interesting places that I might want to visit, using Google Maps. Now, I&amp;rsquo;d like to import them into OsmAnd, my offline navigation app of choice. OsmAnd can import GPX files, however Google maps won&amp;rsquo;t let you export your saved places in a usable format such as GPX, which I&amp;rsquo;m guessing is because they&amp;rsquo;d rather you not leave Google Maps and take your data with you.&lt;/p>
+&lt;p>There is however Google Takout, which does offer a CSV file with links to Google Maps and not much else. This needs to be converted to a GPX file with coordinates to be able to use it with another app such as OsmAnd.&lt;/p>
+&lt;p>&lt;strong>1.&lt;/strong> Go to &lt;a class="link" href="https://takeout.google.com/" target="_blank" rel="noopener"
+>Google Takeout&lt;/a>, then choose &amp;ldquo;deselect all&amp;rdquo; at the top of the list (to ensure you&amp;rsquo;re only getting your Maps data), then select &amp;ldquo;Saved&amp;rdquo; (Not any of the other &amp;ldquo;Maps&amp;rdquo; related items). Proceed with the Google Takeout export, at then end you&amp;rsquo;ll be emailed a zip file containing a &amp;ldquo;Saved&amp;rdquo; folder, with a csv file inside for each of your place lists.&lt;/p>
+&lt;p>&lt;strong>2.&lt;/strong> Upload this csv file to &lt;a class="link" href="https://exportgooglemaps.com/" target="_blank" rel="noopener"
+>https://exportgooglemaps.com/&lt;/a>. Disclaimer: This isn&amp;rsquo;t my service, and it doesn&amp;rsquo;t have a privacy policy that I can see, so it&amp;rsquo;s up to you weather you trust it with your places.&lt;/p>
+&lt;p>Pick &amp;ldquo;JSON&amp;rdquo; when you download after it finishes.&lt;/p>
+&lt;p>&lt;strong>3.&lt;/strong> Upload the resulting JSON file below, to convert it to a GPX file. This one works locally in your browser and doesn&amp;rsquo;t send your data anywhere. You may include a &amp;ldquo;type&amp;rdquo; field, this will group the places together as one folder in OsmAnd, otherwise they will be in separate folders based on how Google Maps has categorized them.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;pre>&lt;code>&amp;lt;script&amp;gt;
+function convertToJson() {
+const fileInput = document.getElementById('fileInput');
+const customType = document.getElementById('typeInput').value || &amp;quot;Unknown&amp;quot;;
+const file = fileInput.files[0];
+if (!file) {
+alert(&amp;quot;Please select a file first!&amp;quot;);
+return;
+}
+const reader = new FileReader();
+reader.onload = function(event) {
+const jsonData = JSON.parse(event.target.result);
+const skippedItems = [];
+const gpxData = jsonToGpx(jsonData, skippedItems, customType);
+if (skippedItems.length &amp;gt; 0) {
+alert(&amp;quot;Skipped the following items due to missing GPS data:\n&amp;quot; + skippedItems.join('\n'));
+}
+const blob = new Blob([gpxData], { type: 'application/gpx+xml' });
+const url = URL.createObjectURL(blob);
+const downloadLink = document.getElementById('downloadLink');
+downloadLink.href = url;
+downloadLink.download = 'converted.gpx';
+downloadLink.style.display = 'block';
+downloadLink.textContent = 'Download GPX File';
+};
+reader.readAsText(file);
+&lt;/code>&lt;/pre>
+&lt;p>}&lt;/p>
+&lt;p>function jsonToGpx(jsonData, skippedItems, customType) {
+let gpxContent = &lt;code>&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;gpx version=&amp;quot;1.1&amp;quot; creator=&amp;quot;JSON to GPX Converter&amp;quot;&amp;gt; &lt;/code>;&lt;/p>
+&lt;pre>&lt;code>jsonData.forEach(entry =&amp;gt; {
+if (!entry.gps || !entry.gps.lat || !entry.gps.lng) {
+skippedItems.push(entry.name || &amp;quot;Unnamed item&amp;quot;);
+return;
+}
+const name = encodeXml(entry.name || &amp;quot;Unnamed&amp;quot;);
+const lat = entry.gps.lat;
+const lon = entry.gps.lng;
+const description = encodeXml(entry.description || &amp;quot;No description available.&amp;quot;);
+const type = encodeXml(customType);
+gpxContent += `
+&lt;/code>&lt;/pre>
+&lt;!-- raw HTML omitted -->
+&lt;pre>&lt;code>gpxContent += `
+&lt;/code>&lt;/pre>
+&lt;p>&lt;!-- raw HTML omitted -->`;
+return gpxContent;
+}&lt;/p>
+&lt;p>function encodeXml(text) {
+return text.replace(/&amp;amp;/g, &amp;ldquo;&amp;amp;&amp;rdquo;)
+.replace(/&amp;lt;/g, &amp;ldquo;&amp;lt;&amp;rdquo;)
+.replace(/&amp;gt;/g, &amp;ldquo;&amp;gt;&amp;rdquo;)
+.replace(/&amp;quot;/g, &amp;ldquo;&amp;quot;&amp;rdquo;)
+.replace(/&amp;rsquo;/g, &amp;ldquo;'&amp;rdquo;);
+}&lt;/p>
+&lt;pre>&lt;code>&amp;lt;/script&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;!-- raw HTML omitted -->
+&lt;p>Once you have your GPX file, go to &amp;ldquo;My Places&amp;rdquo; in OsmAnd and choose + (add), and pick the GPX file you downloaded above.&lt;/p></description></item><item><title>Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay</title><link>https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</link><pubDate>Thu, 28 Nov 2019 12:59:10 +0100</pubDate><guid>https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/</guid><description>&lt;img src="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot.jpg" alt="Featured image of post Better Cycling Infrastructure Overview in OsmAnd Using GeoVelo Overlay" />&lt;p>&lt;strong>2022 update:&lt;/strong> this still works; however the OsmAnd interface looks slightly different now.&lt;/p>
 &lt;p>I’ve recently come across GeoVelo, which offers a map which clearly shows cycling infrastructure even when zoomed out to a country-level overview, which is a great way to have an overview for trip planning, which is’t possible with the offline OsmAnd maps, since cycleways are only shown when zoomed in far enough in OsmAnd. Even with a custom rendering.xml it’s still not possible to get an overview of cycle infrastructure on a country or region level, due to the way the cycleway information is baked into the offline map files. (Side note: GeoVelo also offers their own app - no offline functionality however)&lt;/p>
 &lt;p>But - the GeoVelo tiles can be used as an overlay in OsmAnd, to offer an overview, even when zoomed out - it can even be combined with the above mentioned customized rendering.xml for close zoom levels, and the online GeoVelo maps when zoomed out (OsmAnd will cache the tiles for offline use).&lt;/p>
 &lt;p>Anyway, here’s what it looks like:&lt;/p>
 &lt;p>&lt;img src="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot.jpg"
 width="2160"
 height="1080"
-srcset="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot_hud8316c9fa22a5e46cca965adde5e7cd6_1285269_480x0_resize_q75_box.jpg 480w, https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot_hud8316c9fa22a5e46cca965adde5e7cd6_1285269_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot_hu13093711444304808629.jpg 480w, https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/screenshot_hu17780582800593329107.jpg 1024w"
 loading="lazy"
 alt="GeoVelo overly add dialog"
 class="gallery-image"
@@ -24,7 +91,7 @@ data-flex-basis="480px"
 &lt;p>&lt;img src="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add.jpg"
 width="1080"
 height="1356"
-srcset="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add_hu3b622d932adc2dfc859c155eaf1b09fa_178142_480x0_resize_q75_box.jpg 480w, https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add_hu3b622d932adc2dfc859c155eaf1b09fa_178142_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add_hu17159429783882686839.jpg 480w, https://jonas.bike/better-cycling-infrastructure-overview-in-osmand-using-geovelo-overlay/geovelo-add_hu9944298300324099158.jpg 1024w"
 loading="lazy"
 alt="GeoVelo overly add dialog"
 class="gallery-image"
@@ -38,7 +105,7 @@ data-flex-basis="191px"
 &lt;p>&lt;img src="https://jonas.bike/setting-up-strava-heatmap-in-osmand/screenshot.png"
 width="2160"
 height="1080"
-srcset="https://jonas.bike/setting-up-strava-heatmap-in-osmand/screenshot_huf8436b8296e46f8322fc7abec2a9ab6f_702766_480x0_resize_box_3.png 480w, https://jonas.bike/setting-up-strava-heatmap-in-osmand/screenshot_huf8436b8296e46f8322fc7abec2a9ab6f_702766_1024x0_resize_box_3.png 1024w"
+srcset="https://jonas.bike/setting-up-strava-heatmap-in-osmand/screenshot_hu3138365701356144955.png 480w, https://jonas.bike/setting-up-strava-heatmap-in-osmand/screenshot_hu4760439698250345742.png 1024w"
 loading="lazy"
 alt="Strava heatmap as an underaly in Osmand"
 class="gallery-image"
@@ -76,7 +143,7 @@ Maximum zoom: 16
 &lt;p>&lt;img src="https://jonas.bike/setting-up-strava-heatmap-in-osmand/Screenshot_OsmAnd_edit.png"
 width="1074"
 height="1521"
-srcset="https://jonas.bike/setting-up-strava-heatmap-in-osmand/Screenshot_OsmAnd_edit_hu2ad7f7d410a26c1d55e5cf97fb994fd2_104847_480x0_resize_box_3.png 480w, https://jonas.bike/setting-up-strava-heatmap-in-osmand/Screenshot_OsmAnd_edit_hu2ad7f7d410a26c1d55e5cf97fb994fd2_104847_1024x0_resize_box_3.png 1024w"
+srcset="https://jonas.bike/setting-up-strava-heatmap-in-osmand/Screenshot_OsmAnd_edit_hu17498132122297975041.png 480w, https://jonas.bike/setting-up-strava-heatmap-in-osmand/Screenshot_OsmAnd_edit_hu5869365743617013035.png 1024w"
 loading="lazy"
 alt="Strava heatmap as an underaly in Osmand"
 class="gallery-image"
