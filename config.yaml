@@ -45,7 +45,7 @@ params:
 
     sidebar:
         emoji: 🚴
-        subtitle: "Documenting my adventures and other things. Want to contact me? Send an email to contact@jonas.bike - i'll look at messages occasionally :-)<br>Other projects: <a href=\"https://checkmysignal.net/\">CheckMySignal: Mobile coverage maps across South America</a>"
+        subtitle: "Documenting my adventures and other things. Want to contact me? Send an email to contact@jonas.bike - i'll look at messages occasionally :-)\nOther projects: [CheckMySignal: Mobile coverage maps across South America](https://checkmysignal.net/)."
         avatar:
             enabled: true
             local: true
