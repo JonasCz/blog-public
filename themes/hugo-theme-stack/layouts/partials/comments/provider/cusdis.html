@@ -1,5 +1,6 @@
 {{- $host := default "https://cusdis.com" .Site.Params.comments.cusdis.host -}}
 <div id="cusdis_thread"
+    style="display: flex; height: 40em;"
     data-host="{{ $host }}"
     data-app-id="{{ .Site.Params.comments.cusdis.id }}"
     data-page-id="{{ .File.UniqueID }}"
@@ -12,6 +13,7 @@
         let cusdis = document.querySelector('#cusdis_thread iframe');
         if (cusdis) {
             window.CUSDIS.setTheme(theme)
+            
         }
     }
 
