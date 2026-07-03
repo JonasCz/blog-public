@@ -44,7 +44,7 @@ The back side is completely devoid of components. There is a hole cut in the PCB
 
 ![USB PCB bottom side](board-bottom.jpg)
 
-I will update this review once I've used this charger for some time, once I've seen how durable (or not) it is.
+I've taken this solar panel with me on a 6 month trip through South America. It worked as expected & no failure, but I would not take it again. I did buy the part with the electronics, just in case to have a spare, but I didn't need it. It's too heavy for what it does, and a large power bank ended up being much more frequently used, with grid electricity available usually every few days, which was sufficient and much more convenient than trying to mount this on a (moving) bike.
 
 # How do these USB solar panels work, anyway?
 
