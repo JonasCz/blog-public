@@ -1,3 +1,14 @@
+---
+title: "Low-cost DIY key / transponder for my 2002 Suzuki Wagon R, using Orange5 + ZedBull programmer"
+date: 2026-09-19T18:59:10+01:00
+draft: false
+image: board-back.jpg
+categories:
+- Car
+tags:
+- Hacking
+---
+
 # The car
 I recently got my first car, a Suzuki Wagon R+, from 2002. It's great! But it's also a slighty weird car. 
 
