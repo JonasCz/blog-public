@@ -2,7 +2,7 @@
 title: "Low-cost DIY key / transponder for my 2002 Suzuki Wagon R, using Orange5 + ZedBull programmer"
 date: 2026-09-19T18:30:00+02:00
 draft: false
-image: board-back.jpg
+image: board-front.jpg
 categories:
 - Car
 tags:
