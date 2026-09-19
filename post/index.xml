@@ -1,4 +1,178 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Jonas's blog</title><link>https://jonas.bike/post/</link><description>Recent content in Posts on Jonas's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 19 Sep 2026 18:59:10 +0100</lastBuildDate><atom:link href="https://jonas.bike/post/index.xml" rel="self" type="application/rss+xml"/><item><title>How to export saved places from Google Maps as GPX for OsmAnd</title><link>https://jonas.bike/how-to-export-saved-places-from-google-maps-as-gpx-for-osmand/</link><pubDate>Thu, 08 Aug 2024 12:59:10 +0100</pubDate><guid>https://jonas.bike/how-to-export-saved-places-from-google-maps-as-gpx-for-osmand/</guid><description>&lt;img src="https://jonas.bike/how-to-export-saved-places-from-google-maps-as-gpx-for-osmand/screenshot-google-maps-saved-places.jpg" alt="Featured image of post How to export saved places from Google Maps as GPX for OsmAnd" />&lt;p>For my next big bike trip, I&amp;rsquo;ve been collecting interesting places that I might want to visit, using Google Maps. Now, I&amp;rsquo;d like to import them into OsmAnd, my offline navigation app of choice. OsmAnd can import GPX files, however Google maps won&amp;rsquo;t let you export your saved places in a usable format such as GPX, which I&amp;rsquo;m guessing is because they&amp;rsquo;d rather you not leave Google Maps and take your data with you.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Jonas's blog</title><link>https://jonas.bike/post/</link><description>Recent content in Posts on Jonas's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 19 Sep 2026 18:30:00 +0200</lastBuildDate><atom:link href="https://jonas.bike/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Low-cost DIY key / transponder for my 2002 Suzuki Wagon R, using Orange5 + ZedBull programmer</title><link>https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/</link><pubDate>Sat, 19 Sep 2026 18:30:00 +0200</pubDate><guid>https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/</guid><description>&lt;img src="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/board-back.jpg" alt="Featured image of post Low-cost DIY key / transponder for my 2002 Suzuki Wagon R, using Orange5 + ZedBull programmer" />&lt;h1 id="the-car">The car&lt;/h1>
+&lt;p>I recently got my first car, a Suzuki Wagon R+, from 2002. It&amp;rsquo;s great! But it&amp;rsquo;s also a slighty weird car.&lt;/p>
+&lt;p>One of the weirdnesses is that it&amp;rsquo;s not completely a Suzuki car, some of the electronics are from Opel, Siemens, and other European manufacturers; the car was made in Europe.&lt;/p>
+&lt;h2 id="background">Background&lt;/h2>
+&lt;p>The car came with 1 key when I bought it, and no documentation, and so I thought to myself &amp;ldquo;Can&amp;rsquo;t be so hard to make a second key, right?&amp;rdquo; - well, apparently it can, so this post is a quick overview of what I did and mistakes.&lt;/p>
+&lt;p>For the physical blade of the key, there&amp;rsquo;s services where you take a photo of your key, send it off, and they cut you a matching one. I got mine from AliExpress for about 10€. Fits great and opens all the locks and turns the ignition. But it doesn&amp;rsquo;t start the car yet, the car just cranks forever (like it doesn&amp;rsquo;t have fuel). One lesson learned from all of this though: take a photo of your car key (good lighting, straight down), it&amp;rsquo;ll enable you to get a cheap key from AliExpress.&lt;/p>
+&lt;p>As a background, most &amp;ldquo;modern&amp;rdquo; cars (after 2000 or so), come with something called an immobilizer. Which is a small chip (&amp;ldquo;transponder&amp;rdquo;) housed inside the car key plastic shell, which the car talks to before allowing the engine to run, in order to verify the right key is present. This makes it impossible to start the car with only a physical key blade that fits the ignition lock, as you need to &amp;ldquo;pair&amp;rdquo; the key with the chip in the key with the car. Note this is separate from any wireless unlocking that the remote may have.&lt;/p>
+&lt;h3 id="first-attempt">First attempt&lt;/h3>
+&lt;p>I first read that it&amp;rsquo;s possible to &amp;ldquo;clone&amp;rdquo; some transponders, i.e. read it with a dedicated tool, and then create a new one which presents itself to the car as being identical. It seems like most transponder chips are cloneable this way, with a variety of tools.&lt;/p>
+&lt;p>So I bought an Xhorse Mini Key tool (the one that connects over bluetooth). This one then told me that the transponder in my key was not cloneable:&lt;/p>
+&lt;p>&lt;img src="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/xhorse-screenshot.jpg"
+width="1057"
+height="1382"
+srcset="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/xhorse-screenshot_hubac3a4f36c173117383d408230a4e566_66490_480x0_resize_q75_box.jpg 480w, https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/xhorse-screenshot_hubac3a4f36c173117383d408230a4e566_66490_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="xhorse screenshot"
+class="gallery-image"
+data-flex-grow="76"
+data-flex-basis="183px"
+>&lt;/p>
+&lt;p>Ah well, I could have probably found this out beforehand, with a bit more googling to figure out what my car has (poorly documented, and hard to find info), and whether it would be cloneable (turns out xhorse does have &lt;a class="link" href="http://blog.xhorsetool.com/vvdi-key-tool-transponder-type-list/" target="_blank" rel="noopener"
+>a list&lt;/a>, and this id40 is not in there)&lt;/p>
+&lt;h3 id="mistake">Mistake&lt;/h3>
+&lt;p>Then poking through the app, I saw it has a &amp;ldquo;generate transponder&amp;rdquo; option. Maybe that was what I needed? So I sort of mindlessly clicked it, proceeded through (with my only original, working key in the slot), and then afterwards had a bit of an &amp;ldquo;oh shit&amp;rdquo; moment, did. And turns out the key didn&amp;rsquo;t start the car anymore :-(&lt;/p>
+&lt;p>Turns out that this option overwrites the transponder chip that you give it, turning it into a blank one. Somehow I had expected these to be &amp;ldquo;write once&amp;rdquo;, but apparently not and you can erase them.&lt;/p>
+&lt;p>Ah well, expensive mistake I guess, lets call a local locksmith, they&amp;rsquo;ll have all the tools and can fix this quickly. And it&amp;rsquo;s low effort because I have the key blade already.&lt;/p>
+&lt;p>But turns out that nobody wants to work on this car, becasue well, it&amp;rsquo;s weird and uncommon, with its mix of Suzuki and European electronics, and it being quite uncommon. It seems like some local businesses will do keys for french Renaults all day, but not this. One said &amp;ldquo;300€&amp;rdquo; (ouch). Has to be possible to fix this cheaper, right?&lt;/p>
+&lt;h3 id="why-is-everything-in-this-car-key-ecosystem-so-rubbish">Why is everything in this car-key ecosystem so rubbish?&lt;/h3>
+&lt;p>The next realization is that everything in this universe is somehow a bit sleazy and rubbish, &lt;em>and&lt;/em> very poorly documented. Starting with the xhorse tool: It has a very chinese feeling app which demands a bunch of permissions, requires an account to use the hardware (why?), made me watch through an ad when opening it, and feels like it really wants me to buy all their other products. Why is there no open source app which can utilize the nice chinese hardware, like there is for so many other devices?&lt;/p>
+&lt;p>Anyway, the next thing, to stuff being poorly documented: there is literally &lt;em>no&lt;/em> other information pertaining to this car, or a report of someone who made a key for it. So it seems like all the professionals who do it keep the info to themselves, and there&amp;rsquo;s no useful repository of information anywhere, such as what tools work or don&amp;rsquo;t work, how-to&amp;rsquo;s, etc.&lt;/p>
+&lt;p>And the last thing: all the tools a bit sleazy and slightly rubbush: you have a choice of somewhat expensive newer chinese tools (the xhorse being one), which seems legit but have annoying account requirements, and you have older chinese tools, which are often clones of even older europe-made tools. We&amp;rsquo;ll get to that&amp;hellip;&lt;/p>
+&lt;h3 id="researching-solutions">Researching solutions:&lt;/h3>
+&lt;p>Since I was unwilling to spend 300€ for something that I could probably do much cheaper myself (and even for 300€, getting someone to come out to the countryside, especially in France, is annoying).&lt;/p>
+&lt;p>So the logical next solution that I ended up spending time researching was tools that would plug into the OBD port, and which (as I understand it) tells the car that &amp;ldquo;hey, here&amp;rsquo;s your new key with new transponder&amp;rdquo;. That&amp;rsquo;s what the &amp;ldquo;generate transponder&amp;rdquo; in the xhorse tool would have made, a blank transponder for use in this way.&lt;/p>
+&lt;p>There&amp;rsquo;s a few options:&lt;/p>
+&lt;p>&lt;strong>SBB&lt;/strong> / &lt;strong>CK100&lt;/strong>:&lt;/p>
+&lt;p>these are about 50-100€ on aliexpress, and both &lt;em>claim&lt;/em> to support this car in their list of supported cars. I was slightly skeptical of this claim, because:&lt;/p>
+&lt;ul>
+&lt;li>The car&amp;rsquo;s mixed electronics, with only some parts being Suzuki made, and the rest being Opel and others. Basically no confirmations that I could find of someone having tried it and confirmed that it would work.&lt;/li>
+&lt;li>Me not having the &amp;ldquo;security code&amp;rdquo; (car came without documentation), which seems in some cases could be needed, as something to type into the tool to authorize the creation of new keys (?). Again poorly documented, with no info findable.&lt;/li>
+&lt;li>a slight fear of being able to &amp;ldquo;brick&amp;rdquo; the car: if the tool writes bad data to the car&amp;rsquo;s computer that causes it to be completely broken, then we&amp;rsquo;re much worse off than before. Things like firmware updates on 20yr old devices that go wrong in all sorts of ways come to mind.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Autel KM100&lt;/strong>&lt;/p>
+&lt;p>A newer Chinese tool which can talk to the OBD port, and &lt;em>also&lt;/em> claims to support this car. I skipped this because:&lt;/p>
+&lt;ul>
+&lt;li>Same concerns about mixed electronics, and lack of security code, and briking. But also&lt;/li>
+&lt;li>Autel&amp;rsquo;s customer support told me that it supports this car, and does so without needing a security code (even with giving them the VIN and the part numbers of the ECU and immobilizer). But it still seemed like this could be a scripted answer and not actually true. I will never know.&lt;/li>
+&lt;li>expensive and hard(er) to resell: this one is 350€ (depending on where you buy it), &lt;em>and&lt;/em> you need to tie it to an Autel account. If you want to remove the account and transfer it to someone else, you have to &lt;em>ask the customer service&lt;/em>, and tell them who you want to transfer it to, and give them proof of purchase.. yuck. That sort of feels like you&amp;rsquo;re using a device but don&amp;rsquo;t really own it. If customer service didn&amp;rsquo;t respond, then i&amp;rsquo;d be stuck with an expensive device that would be unusable. It als makes buying a used one to save money have the same problem, since I can&amp;rsquo;t be sure that the seller is able or willing to transfer the device to my account. So I gave up on this idea&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>EEPROM reading&lt;/strong>&lt;/p>
+&lt;p>The other third option is to take a dump of the configuration memory of the microcontroller in the car&amp;rsquo;s immobilizer module, and then make matching keys (transponder chips) corresponding to that data. That&amp;rsquo;s in the next section:&lt;/p>
+&lt;h3 id="the-solution-i-ended-up-with">The solution I ended up with:&lt;/h3>
+&lt;p>You basically need two tools, one to read the data off the eeprom, and then another to make a transponder with that data.&lt;/p>
+&lt;p>For &lt;strong>reading the eeprom&lt;/strong>, for some cars you can use very common and cheap eeprom reader tools (€5 range), but unfortunately not this one, because the eeprom seems to be built into the microcontroller, so you need a specific tool to read it.&lt;/p>
+&lt;p>I went with an Orange5 clone from Aliexpress, about €80, making sure that it supported TMS370 (there&amp;rsquo;s a few variants), since that was what would potentially be in mine. Which was the right choice.
+But we&amp;rsquo;re coming back to the &amp;ldquo;sleazy&amp;rdquo; part here, because while it&amp;rsquo;s cheap (80€), it&amp;rsquo;s cheap because it&amp;rsquo;s &amp;ldquo;clone&amp;rdquo; hardware, where the chinese manufacturer copied the hardware, and then ships it with the software developed by a Bulgarian developer who developed the original thing. So I apologize to whoever created the original, that I can&amp;rsquo;t afford it and bought the clone instead :-(&lt;/p>
+&lt;p>(There&amp;rsquo;s other dedicated tools for tms370 only, which are cheaper, seem less nice, and which I did not try.)&lt;/p>
+&lt;p>Anyway, it arrived, and worked! Approx steps for reading the eeprom, and then using the file, are:&lt;/p>
+&lt;p>&lt;strong>disconnect battery&lt;/strong>: It&amp;rsquo;s best to disconnect the negative side, so that it&amp;rsquo;s less likely to create a short circuit involving the wrench you&amp;rsquo;re using in the process.&lt;/p>
+&lt;p>&lt;strong>Dismantle the steering column cover and remove the unit&lt;/strong>: You need to remove the plastic covers, which will reveal the immobilizer unit. Then disconnectthe cable going to the right stalk (wipers), and the cable going to the immobilizer unit (this one is a bit though). Then insert the key into the ignition, turn it to the &amp;ldquo;acc&amp;rdquo; position, and then poke with a thin screwdriver or similiar in the little hole on the top side, which will enable you to pull out the lock cilynder. After that you can fiddle off the immobilizer as well. It looks like this:&lt;/p>
+&lt;p>&lt;img src="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/immo-unit.jpeg"
+width="960"
+height="1280"
+srcset="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/immo-unit_hud41b5f11607bc85b772ad27ddfd5d49f_81509_480x0_resize_q75_box.jpeg 480w, https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/immo-unit_hud41b5f11607bc85b772ad27ddfd5d49f_81509_1024x0_resize_q75_box.jpeg 1024w"
+loading="lazy"
+alt="immo-unit"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+>&lt;/p>
+&lt;p>(Markings for future googlers: Siemens WFS Opel2 24 445 098 5Wk4 763 E-491-42)&lt;/p>
+&lt;p>(and if you have no keys left: good luck, thankfully I didn&amp;rsquo;t have to do that).&lt;/p>
+&lt;p>Photo of disassembly: 1 is the cables you have to disconnect to get to the little release hole, 2 is the hole you need to poke.&lt;/p>
+&lt;p>&lt;img src="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/steering-column-dismantle.jpg"
+width="1920"
+height="1080"
+srcset="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/steering-column-dismantle_hue7597f6056f9f6083f09a862dd582a21_123223_480x0_resize_q75_box.jpg 480w, https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/steering-column-dismantle_hue7597f6056f9f6083f09a862dd582a21_123223_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="steering-colum-dismantle"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>&lt;/p>
+&lt;p>&lt;strong>desolder the coil and free the board&lt;/strong>&lt;/p>
+&lt;p>Next, you need to free the circuit board. First remove the cover with the label (4 clips), which will reveal the underside of the circuit board. Here you need to desolder the two wires going to the circular coil, while wiggling the board to free it:&lt;/p>
+&lt;p>&lt;img src="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/board-back.jpg"
+width="1280"
+height="720"
+srcset="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/board-back_hue7597f6056f9f6083f09a862dd582a21_92736_480x0_resize_q75_box.jpg 480w, https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/board-back_hue7597f6056f9f6083f09a862dd582a21_92736_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="board-back"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>.&lt;/p>
+&lt;p>Then you will see the side of the board with the MCU:&lt;/p>
+&lt;p>&lt;img src="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/board-front.jpg"
+width="1280"
+height="720"
+srcset="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/board-front_hue7597f6056f9f6083f09a862dd582a21_118747_480x0_resize_q75_box.jpg 480w, https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/board-front_hue7597f6056f9f6083f09a862dd582a21_118747_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="board-front"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>&lt;/p>
+&lt;p>(Part number for googlers: Texas Instruments WX 1AA75TW 6532672007 6594836106 R52221). This one is a TMS370. It seems like there is also a variant with a different controller, documented on &lt;a class="link" href="https://iamcarhacker.com/procedures/programming/key-programming/how-to-read-the-immo-code-car-pass-from-an-opel-vauxhall-immo-2/" target="_blank" rel="noopener"
+>iamcarhacker&lt;/a> (&lt;a class="link" href="https://web.archive.org/web/20260919160621/https://iamcarhacker.com/procedures/programming/key-programming/how-to-read-the-immo-code-car-pass-from-an-opel-vauxhall-immo-2/" target="_blank" rel="noopener"
+>web archive in case it disappears&lt;/a>). I &lt;em>think&lt;/em> that this is the older one, so these ones (green label and no mention of &amp;ldquo;VDO&amp;rdquo; ), will contain TMS370 (and need a tms370 capable tool), and the newer &amp;ldquo;VDO&amp;rdquo; ones with orange label will contain the Motorola HC908AB16A that iamcarhacker found.&lt;/p>
+&lt;p>I bought the Orange5 because it claims to support both.&lt;/p>
+&lt;p>&lt;strong>desolder the chip&lt;/strong>&lt;/p>
+&lt;p>next step is to desolder the chip. No photos here, but I&amp;rsquo;d recommend only doing this whole process if you&amp;rsquo;re comfortable with it. Hot air required, not particularly difficult (experience required thoug!)&lt;/p>
+&lt;p>&lt;strong>read eeprom with orange5&lt;/strong>.&lt;/p>
+&lt;p>Place the chip in the adapter supplied with orange5, the corner with the small diagonal cutout aligned with the similar diagonal corner in the reader. Sorry, no photo, but there&amp;rsquo;s someone else&amp;rsquo;s video of the process here: &lt;a class="link" href="https://www.youtube.com/watch?v=hjcDguZOhrQ" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=hjcDguZOhrQ&lt;/a>&lt;/p>
+&lt;p>Then, connect orange5, install drivers (mostly just worked for me, I had to go in device manager and do &amp;ldquo;update driver&amp;rdquo; and select the supplied one), then press &amp;ldquo;configuration&amp;rdquo; (1. in the screenshot) there select the &amp;ldquo;Suzuki Wagon R&amp;rdquo; option, then &amp;ldquo;read&amp;rdquo; (2. in the screenshot).&lt;/p>
+&lt;p>&lt;img src="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/orange5-screenshot.jpg"
+width="990"
+height="646"
+srcset="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/orange5-screenshot_hu02aa61ae1d9de35cbe238d2676170cb9_65341_480x0_resize_q75_box.jpg 480w, https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/orange5-screenshot_hu02aa61ae1d9de35cbe238d2676170cb9_65341_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="orange5-screenshot"
+class="gallery-image"
+data-flex-grow="153"
+data-flex-basis="367px"
+>.&lt;/p>
+&lt;p>Once you have data in the window, save it to a .bin file somewhere. Try reading it several times to make sure you get the same data, to make sure it&amp;rsquo;s good.&lt;/p>
+&lt;p>(My Orange5 Unit came with a CD, the contents of which I won&amp;rsquo;t distribut here since it&amp;rsquo;s likely copyright infringement. But the name of the contained file is &lt;em>烧录器5.rar&lt;/em> sha256: 3d83e28361dd8cea6f388e3e871704256fff0c3cf568a46a1f8254a4ee4a67bc). It has the software and drivers, all of which worked on the first try.)&lt;/p>
+&lt;p>&lt;strong>Create new transponder using the file&lt;/strong>. For this you need a tool which can be used with a PC, and write to a transponder, based on the data in the eeprom .bin file.&lt;/p>
+&lt;ul>
+&lt;li>pricier, but better and &amp;ldquo;legit&amp;rdquo;: TMPRO. &lt;a class="link" href="https://tmpro2.com/software-modules-description-and-prices/" target="_blank" rel="noopener"
+>Their page lists support for this box&lt;/a> but it&amp;rsquo;s pricier and unclear how hard it is to &amp;ldquo;resell&amp;rdquo; the license afterwards.&lt;/li>
+&lt;li>Zed Bull: much cheaper, but this seems yet another case where the chinese manufacturer ripped off the hardware and ship it with software made by someone else. So sorry to whoever made the software, that I bought the clone of&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;p>So anyway, I went with zedbull, this is a bit trickier to get working:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>This one came with a CD wit software, which you can probably also find the contents of elsewhere.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Connect USB, install driver via device manager -&amp;gt; update driver, install the driver shipped with it&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Install dotnet framework 3.5 (download from microsoft)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>installl zedbull v506 software.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>go to program files (x86), and then in the folder where you installed it, &amp;ldquo;properties&amp;rdquo;, and make it modifieable by &amp;ldquo;anyone&amp;rdquo;. Otherwise it does not work correctly. Running as administrator might also make it work&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>In my case, now it would run, but always always show an error &amp;ldquo;Device not responding&amp;rdquo; when connecting to the COM port. The fix for this is also supplied on the CD, in the form of a v508 software folder. The contents of this needs to be copied into the installation directory, overwriting what is already there (from the v506 install). There&amp;rsquo;s a PDF with instructions for that on the CD as well.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Then it finally works, and you can set it to &amp;ldquo;english&amp;rdquo; in the main menu tab, connect device (main menu also), then go to &amp;ldquo;extended functions&amp;rdquo;:&lt;/p>
+&lt;p>&lt;img src="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/zedbull.jpg"
+width="960"
+height="687"
+srcset="https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/zedbull_hu02aa61ae1d9de35cbe238d2676170cb9_62865_480x0_resize_q75_box.jpg 480w, https://jonas.bike/low-cost-diy-key-/-transponder-for-my-2002-suzuki-wagon-r-using-orange5--zedbull-programmer/zedbull_hu02aa61ae1d9de35cbe238d2676170cb9_62865_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="zedbull"
+class="gallery-image"
+data-flex-grow="139"
+data-flex-basis="335px"
+>&lt;/p>
+&lt;p>Here you can select &amp;ldquo;Opel immo2 siemens immbox&amp;rdquo;, then &amp;ldquo;open file&amp;rdquo; to choose the file you saved from orange5 earlier, and then &amp;ldquo;program transponder&amp;rdquo;. And then hopefully you will have a transponder/key that starts your car! (once you resolder the chip to the immobiliser module and put everything back together).&lt;/p>
+&lt;p>Some other notes and recommendations:&lt;/p>
+&lt;ul>
+&lt;li>With the software being not quite legit, I would run this stuff on a throway install or VM.&lt;/li>
+&lt;li>I bought plain pcf7935 transponders, as well as ones marketed as &amp;ldquo;opel id40&amp;rdquo;. all worked.&lt;/li>
+&lt;li>this might also work for the opel agila or vauxhall agila, since they seem to use similar electronics. Beware that they might be not using the tms370 microcontroller.&lt;/li>
+&lt;li>In the end this is about 150€ for both the orange5 and the zed bull, and both don&amp;rsquo;t have any account requirements etc and can be resold. So it&amp;rsquo;s a cheap second key (if you are comfortable soldering the IC and have time on your hands)&lt;/li>
+&lt;/ul>
+&lt;p>Anyway, hopefully this is usefull for someone who has the same problem of wanting to DIY keys for their (until now), poorly documented Wagon R.&lt;/p></description></item><item><title>How to export saved places from Google Maps as GPX for OsmAnd</title><link>https://jonas.bike/how-to-export-saved-places-from-google-maps-as-gpx-for-osmand/</link><pubDate>Thu, 08 Aug 2024 12:59:10 +0100</pubDate><guid>https://jonas.bike/how-to-export-saved-places-from-google-maps-as-gpx-for-osmand/</guid><description>&lt;img src="https://jonas.bike/how-to-export-saved-places-from-google-maps-as-gpx-for-osmand/screenshot-google-maps-saved-places.jpg" alt="Featured image of post How to export saved places from Google Maps as GPX for OsmAnd" />&lt;p>For my next big bike trip, I&amp;rsquo;ve been collecting interesting places that I might want to visit, using Google Maps. Now, I&amp;rsquo;d like to import them into OsmAnd, my offline navigation app of choice. OsmAnd can import GPX files, however Google maps won&amp;rsquo;t let you export your saved places in a usable format such as GPX, which I&amp;rsquo;m guessing is because they&amp;rsquo;d rather you not leave Google Maps and take your data with you.&lt;/p>
 &lt;p>There is however Google Takeout, which does offer a CSV file with links to Google Maps and not much else. This needs to be converted to a GPX file with coordinates to be able to use it with another app such as OsmAnd.&lt;/p>
 &lt;p>&lt;strong>How to:&lt;/strong>&lt;/p>
 &lt;p>&lt;strong>1.&lt;/strong> Go to &lt;a class="link" href="https://takeout.google.com/" target="_blank" rel="noopener"
